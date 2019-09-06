@@ -1,0 +1,110 @@
+codeunit 5266500 "LBT Process Mgt."
+{
+    trigger OnRun()
+    begin
+        
+    end;
+    
+    var
+        myInt: Integer;
+    procedure CreateSalesProcess(var SalesHdr: Record "Sales Header")
+    var
+        ProcessSetup: Record "LBT Process Setup";
+        Process: Record "LBT Process";
+    begin
+        ProcessSetup.TestField("Process Nos.");
+        if not process.get(SalesHdr."LBT Process No.") then begin
+            Process.init;
+            process."No." := '';
+            Process."Record ID" := SalesHdr.RecordId;
+            Process.Description := SalesHdr."Posting Description";
+            process.insert(true);
+        end; 
+    end; 
+    procedure CreatePurchProcess(var PurchHdr: Record "Purchase Header")
+    var
+        ProcessSetup: Record "LBT Process Setup";
+        Process: Record "LBT Process";
+    begin
+        ProcessSetup.TestField("Process Nos.");
+        if not process.get(PurchHdr."LBT Process No.") then begin
+            Process.init;
+            process."No." := '';
+            Process."Record ID" := PurchHdr.RecordId;
+            Process.Description := PurchHdr."Posting Description";
+            process.insert(true);
+        end; 
+    end;
+    ///NAVIGATE:Eventsubscriber
+    //General Journal Line
+    [EventSubscriber(ObjectType::Table, Database::"Gen. Journal line", 'OnAfterCopyGenJnlLineFromPurchHeader', '', true,true)]
+    local procedure extSalesGenJnlLine(PurchaseHeader: Record "Purchase Header";var GenJournalLine: Record "Gen. Journal Line")
+    begin
+        GenJournalLine."LBT Process No." := PurchaseHeader."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Table, Database::"Gen. Journal line", 'OnAfterCopyGenJnlLineFromSalesHeader', '', true,true)]
+    local procedure extPurchGenJnlLine(SalesHeader: Record "Sales Header";var GenJournalLine: Record "Gen. Journal Line")
+    begin
+        GenJournalLine."LBT Process No." := SalesHeader."LBT Process No.";
+    end;
+    
+    //G/LEntry
+    [EventSubscriber(ObjectType::Table, Database::"G/L Entry", 'OnAfterCopyGLEntryFromGenJnlLine', '', true, true)]
+    local procedure extGLEntry(var GenJournalLine: Record "Gen. Journal Line";var GLEntry: Record "G/L Entry")
+    begin
+        GLEntry."LBT Process No." := GenJournalLine."LBT Process No.";    
+    end;
+    //Cust ledg Entry
+    [EventSubscriber(ObjectType::Table, Database::"Cust. Ledger Entry", 'OnAfterCopyCustLedgerEntryFromGenJnlLine', '', true, true)]
+    local procedure extCustledgEntry(GenJournalLine: Record "Gen. Journal Line";var CustLedgerEntry: Record "Cust. Ledger Entry")
+    begin
+        CustLedgerEntry."LBT Process No." := GenJournalLine."LBT Process No.";    
+    end;
+    //Vendor Ledger Entry
+    [EventSubscriber(ObjectType::Table, Database::"Vendor Ledger Entry", 'OnAfterCopyVendLedgerEntryFromGenJnlLine', '', true, true)]
+    local procedure extVendLedgEntry(GenJournalLine: Record "Gen. Journal Line";var VendorLedgerEntry: Record "Vendor Ledger Entry")
+    begin
+        VendorLedgerEntry."LBT Process No." := GenJournalLine."LBT Process No.";
+    end;
+    //Employee ledger Entry
+    [EventSubscriber(ObjectType::Table, Database::"Employee Ledger Entry", 'OnAfterCopyEmployeeLedgerEntryFromGenJnlLine', '', true, true)]
+    local procedure extEmployeeledgEntry(GenJournalLine: Record "Gen. Journal Line";var EmployeeLedgerEntry: Record "Employee Ledger Entry")
+    begin
+        EmployeeLedgerEntry."LBT Process No." := GenJournalLine."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Codeunit, codeunit::"Item Jnl.-Post Line", 'OnBeforeInsertItemLedgEntry', '', true, true)]
+    //ItemLedgerEntry
+    local procedure extItemLedgEntry(ItemJournalLine: Record "Item Journal Line";var ItemLedgerEntry: Record "Item Ledger Entry")
+    begin
+        ItemLedgerEntry."LBT Process No." := ItemJournalLine."LBT Process No.";
+    end;
+    ///CU 80
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnAfterFillInvoicePostBuffer', '', true, true)]
+    local procedure extSalesFillInvBuffer(SalesLine: Record "Sales Line";var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    begin
+        InvoicePostBuffer."LBT Process No." := SalesLine."LBT Process No.";
+    end;
+    ///CU90
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", 'OnAfterFillInvoicePostBuffer', '', true, true)]
+    local procedure extPurchFillInvBuffer(PurchLine: Record "Purchase Line";var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    begin
+        InvoicePostBuffer."LBT Process No." := PurchLine."LBT Process No.";
+    end;
+    ///InvoicePostBuffer
+    [EventSubscriber(ObjectType::table, database::"Invoice Post. Buffer", 'OnAfterInvPostBufferPrepareSales', '', true, true)]
+    local procedure extSalesPrepareInvBuffer(var SalesLine: Record "Sales Line";var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    begin
+        InvoicePostBuffer."LBT Process No." := SalesLine."LBT Process No.";
+    end;
+        [EventSubscriber(ObjectType::table, database::"Invoice Post. Buffer", 'OnAfterInvPostBufferPreparePurchase', '', true, true)]
+    local procedure extPurchPrepareInvBuffer(var PurchaseLine: Record "Purchase Line";var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    begin
+        InvoicePostBuffer."LBT Process No." := purchaseLine."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Table, Database::"Detailed CV Ledg. Entry Buffer", 'OnAfterCopyFromGenJnlLine', '', true, true)]
+    local procedure extCVLedgEntry(GenJnlLine: Record "Gen. Journal Line";var DtldCVLedgEntryBuffer: Record "Detailed CV Ledg. Entry Buffer")
+    begin
+        DtldCVLedgEntryBuffer."LBT Process No." := GenJnlLine."LBT Process No.";
+    end;
+
+}
