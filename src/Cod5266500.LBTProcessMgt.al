@@ -79,12 +79,38 @@ codeunit 5266500 "LBT Process Mgt."
         ItemLedgerEntry."LBT Process No." := ItemJournalLine."LBT Process No.";
     end;
     ///CU 80
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnBeforeUpdateSalesLineBeforePost', '', true, true)]
+    local procedure extSalesLineBeforePost(var SalesHeader: Record "Sales Header";var SalesLine: Record "Sales Line")
+    begin
+        if salesline."LBT Process No." = '' then
+            if salesheader."LBT Process No." <> '' then
+                SalesLine."LBT Process No." := Salesheader."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post",'OnPostItemJnlLineOnAfterCopyDocumentFields', '', true,true)]
+    local procedure extSalesOnPostItemJnlLIne(SalesLine: Record "Sales Line";var ItemJournalLine: Record "Item Journal Line")
+    begin
+        ItemJournalLine."LBT Process No." := SalesLine."LBT Process No.";
+    end;
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnAfterFillInvoicePostBuffer', '', true, true)]
     local procedure extSalesFillInvBuffer(SalesLine: Record "Sales Line";var InvoicePostBuffer: Record "Invoice Post. Buffer")
     begin
         InvoicePostBuffer."LBT Process No." := SalesLine."LBT Process No.";
     end;
+    
     ///CU90
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post" , 'OnBeforeUpdatePurchLineBeforePost', '', true, true)]
+    local procedure extPurchLineBeforePost(var PurchaseLine: Record "Purchase Line";var PurchaseHeader: Record "Purchase Header")
+    begin
+        if purchaseline."LBT Process No." = '' then
+            if purchaseheader."LBT Process No." <> '' then
+                purchaseLine."LBT Process No." := purchaseHeader."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post",'OnPostItemJnlLineOnAfterCopyDocumentFields', '', true,true)]
+    local procedure extPurchOnPostItemJnlLIne(PurchaseLine: Record "Purchase Line";var ItemJournalLine: Record "Item Journal Line")
+    begin
+        ItemJournalLine."LBT Process No." := PurchaseLine."LBT Process No.";
+    end;
+    
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", 'OnAfterFillInvoicePostBuffer', '', true, true)]
     local procedure extPurchFillInvBuffer(PurchLine: Record "Purchase Line";var InvoicePostBuffer: Record "Invoice Post. Buffer")
     begin
@@ -105,6 +131,41 @@ codeunit 5266500 "LBT Process Mgt."
     local procedure extCVLedgEntry(GenJnlLine: Record "Gen. Journal Line";var DtldCVLedgEntryBuffer: Record "Detailed CV Ledg. Entry Buffer")
     begin
         DtldCVLedgEntryBuffer."LBT Process No." := GenJnlLine."LBT Process No.";
+    end;
+    
+    
+    ///NAVIGATE: Show event
+    [EventSubscriber(ObjectType::Page, Page::Navigate, 'OnBeforeNavigateShowRecords', '', True, True)]
+    local procedure OnBeforeNavigateShowRecords(TableID: Integer;var TempDocumentEntry: Record "Document Entry";var IsHandled: Boolean)
+    var
+        RecRef:recordref;
+        fref:FieldRef;
+        PageMgt: Codeunit "Page Management";
+        vari:Variant;
+    begin
+        if isHandled then
+            exit;
+        if TempDocumentEntry."LBT Process No." = '' then
+            exit;
+        
+        recref.open(TempDocumentEntry."Table ID");
+        fref := recref.Field(5266500);
+        fref.setfilter(TempDocumentEntry."LBT Process No.");
+        if TempDocumentEntry."Table ID" in[database::"Sales Header",database::"Purchase Header"] then begin
+            fref := recref.field(1);
+            fref.setrange(TempDocumentEntry."Document Type");
+            recref.findfirst();
+        end;
+        //pagemgt.PageRun(recref);
+
+        if recref.count = 1 then begin
+            vari := RecRef;
+            page.run(PageMgt.GetDefaultCardPageID(RecRef.Number),vari);
+        end else begin
+            pagemgt.PageRun(recref);
+        end;
+        isHandled := true;
+
     end;
 
 }
