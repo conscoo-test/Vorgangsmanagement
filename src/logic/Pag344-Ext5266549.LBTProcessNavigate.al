@@ -39,7 +39,11 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
     
    var
         ProcessNo:code[50];
-    local procedure FindProcess()
+    procedure SetProcessNo(p_ProcessNo:Code[50])
+    begin
+       ProcessNo := p_ProcessNo;
+    end;
+    procedure FindProcess()
     var
         window:Dialog;
         Text002:Label 'Search';        
@@ -254,14 +258,13 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
             InsertIntoDocEntry(Rec,DATABASE::"job Ledger Entry",0,jobLedgEntry.TABLECAPTION,jobLedgEntry.COUNT);
         END;
-        ///TODO:Ressourcen
         IF resLedgEntry.READPERMISSION THEN BEGIN
             resLedgEntry.RESET;
-            //resLedgEntry.SETCURRENTKEY("lbt Process No.");
-            //resLedgEntry.SETFILTER("lbt Process No.",ProcessNo);
+            resLedgEntry.SETCURRENTKEY("lbt Process No.");
+            resLedgEntry.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            //InsertIntoDocEntry(Rec,DATABASE::"res. Ledger Entry",0,resLedgEntry.TABLECAPTION,resLedgEntry.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"res. Ledger Entry",0,resLedgEntry.TABLECAPTION,resLedgEntry.COUNT);
         END;
         IF InteractLogEntry.READPERMISSION THEN BEGIN
             InteractLogEntry.RESET;
@@ -271,12 +274,12 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
             InsertIntoDocEntry(Rec,DATABASE::"Interaction Log Entry",0,InteractLogEntry.TABLECAPTION,InteractLogEntry.COUNT);
         END;
-
     end;
             
     [BusinessEvent(true)]
     local procedure onAfterInsertDocEntries(DocEntry: Record "Document Entry";ProcessNo:code[50])
     begin
+        
     end;
     
 }

@@ -1,10 +1,10 @@
-pageextension 5266519 "LBT Process PostedPurchInvoice" extends "Posted Purchase Invoice"//140
+pageextension 5266521 "LBT Process CreateInteraction" extends "Create Interaction"//5077
 {
     layout
     {
         addlast(General)        
         {
-            field("Process No."; "LBT Process No.")
+            field("LBT Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

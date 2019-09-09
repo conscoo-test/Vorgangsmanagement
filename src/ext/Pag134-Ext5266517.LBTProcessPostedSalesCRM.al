@@ -4,7 +4,7 @@ pageextension 5266517 "LBT Process PostedSalesCRM" extends "Posted Sales Credit 
     {
         addlast(General)        
         {
-            field("LBT Process No."; "LBT Process No.")
+            field("Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

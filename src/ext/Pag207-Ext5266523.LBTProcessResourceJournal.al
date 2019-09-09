@@ -1,4 +1,4 @@
-pageextension 5266500 "LBT Process GenLedgEntries" extends "general ledger entries"//20
+pageextension 5266523 "LBT Process ResourceJournal" extends "resource Journal"//207
 {
     layout
     {

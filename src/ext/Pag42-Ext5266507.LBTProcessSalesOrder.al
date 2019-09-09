@@ -4,7 +4,7 @@ pageextension 5266507 "LBT Process SalesOrder" extends "Sales Order"//42
     {
         addlast(General)        
         {
-            field("LBT Process No."; "LBT Process No.")
+            field("Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

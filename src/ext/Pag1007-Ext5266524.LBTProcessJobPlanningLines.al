@@ -1,4 +1,4 @@
-pageextension 5266500 "LBT Process GenLedgEntries" extends "general ledger entries"//20
+pageextension 5266524 "LBT Process JobPlanningLines" extends "Job Planning Lines"//1007
 {
     layout
     {

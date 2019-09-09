@@ -4,7 +4,7 @@ pageextension 5266518 "LBT Process PostedPurchreceipt" extends "Posted Purchase 
     {
         addlast(General)        
         {
-            field("LBT Process No."; "LBT Process No.")
+            field("Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

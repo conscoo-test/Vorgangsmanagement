@@ -23,6 +23,28 @@ page 5266501 "LBT Process List"
                 }
             }
         }
+        
+    }
+    actions
+    {
+        area(Navigation)
+        {
+            action(Navigate)
+            {  
+                ApplicationArea=all;
+                Image=Navigate;
+                Promoted=true;
+                PromotedCategory=Process;
+                PromotedOnly=true;
+                PromotedIsBig=true;
+
+
+                trigger OnAction()
+                begin
+                    Rec.Navigate();
+                end;
+            }
+        }
     }
     
 }

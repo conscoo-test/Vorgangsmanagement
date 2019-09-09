@@ -4,7 +4,7 @@ pageextension 5266512 "LBT Process PurchaseInvoices" extends "Purchase Invoices"
     {
         addlast(Control1)        
         {
-            field("LBT Process No."; "LBT Process No.")
+            field("Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

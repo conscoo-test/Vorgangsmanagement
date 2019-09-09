@@ -4,7 +4,7 @@ pageextension 5266511 "LBT Process PurchaseOrder" extends "purchase Order"//50
     {
         addlast(General)        
         {
-            field("LBT Process No."; "LBT Process No.")
+            field("Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

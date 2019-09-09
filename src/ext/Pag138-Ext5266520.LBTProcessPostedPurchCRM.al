@@ -4,7 +4,7 @@ pageextension 5266520 "LBT Process PostedPurchCRM" extends "Posted Purchase Cred
     {
         addlast(General)        
         {
-            field("LBT Process No."; "LBT Process No.")
+            field("Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

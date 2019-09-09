@@ -78,6 +78,52 @@ codeunit 5266500 "LBT Process Mgt."
     begin
         ItemLedgerEntry."LBT Process No." := ItemJournalLine."LBT Process No.";
     end;
+    [EventSubscriber(ObjectType::Table, Database::"Res. Journal Line", 'OnAfterCopyResJnlLineFromSalesLine', '', true, true)]
+    local procedure extResJnlLine(var SalesLine: Record "Sales Line";var ResJnlLine: Record "Res. Journal Line")
+    begin
+        ResJnlLine."LBT Process No." := SalesLine."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Table, Database::"Res. Ledger Entry", 'OnAfterCopyFromResJnlLine', '', true, true)]
+    local procedure extResEntry(ResJournalLine: Record "Res. Journal Line";var ResLedgerEntry: Record "Res. Ledger Entry")
+    begin
+        ResLedgerEntry."LBT Process No." := ResJournalLine."LBT Process No.";
+    end;
+    ///JOB
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromGenJnlLineToJnlLine', '', true, true)]
+    local procedure extJobjnlLinefromGenjnlLine(GenJnlLine: Record "Gen. Journal Line";var JobJnlLine: Record "Job Journal Line")
+    begin
+        JobJnlLine."LBT Process No." := GenJnlLine."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromJnlLineToLedgEntry', '', true, true)]
+    local procedure extJobjnlLineToEntry(JobJournalLine: Record "Job Journal Line";var JobLedgerEntry: Record "Job Ledger Entry")
+    begin
+        JobLedgerEntry."LBT Process No." := JobJournalLine."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromPurchaseLineToJnlLine', '', true, true)]
+    local procedure extJobPurchLineToJnlLine(PurchLine: Record "Purchase Line";var JobJnlLine: Record "Job Journal Line")
+    begin
+        JobJnlLine."LBT Process No." := PurchLine."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromPlanningSalesLineToJnlLine', '', true, true)]
+    local procedure extJobSalesLineTojnlLine(SalesLine: Record "Sales Line";var JobJnlLine: Record "Job Journal Line")
+    begin
+        JobJnlLine."LBT Process No." := JobJnlLine."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromJobLedgEntryToPlanningLine', '', true, true)]
+    local procedure extJobJobLedgEntryToJobPlanningLine(JobLedgEntry: Record "Job Ledger Entry";var JobPlanningLine: Record "Job Planning Line")
+    begin
+        JobPlanningLine."lbt process No." := JobLedgEntry."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Transfer Line", 'OnAfterFromPlanningLineToJnlLine', '', true, true)]
+    local procedure extJobPlanningLineTojnlLine(JobPlanningLine: Record "Job Planning Line";var JobJournalLine: Record "Job Journal Line")
+    begin
+        JobJournalLine."LBT Process No." := JobPlanningLine."LBT Process No.";
+    end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Job Jnl.-Post Line", 'OnBeforeJobLedgEntryInsert', '', true, true)]
+    local procedure onBeforeInsertJobLedgerEntry(JobJournalLine: Record "Job Journal Line";var JobLedgerEntry: Record "Job Ledger Entry")
+    begin
+        JobLedgerEntry."LBT Process No." := JobJournalLine."LBT Process No.";    
+    end;
     ///CU 80
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnBeforeUpdateSalesLineBeforePost', '', true, true)]
     local procedure extSalesLineBeforePost(var SalesHeader: Record "Sales Header";var SalesLine: Record "Sales Line")
@@ -132,7 +178,12 @@ codeunit 5266500 "LBT Process Mgt."
     begin
         DtldCVLedgEntryBuffer."LBT Process No." := GenJnlLine."LBT Process No.";
     end;
-    
+    ///InteractionLogentry
+    [EventSubscriber(ObjectType::Table, Database::"Interaction Log Entry", 'OnAfterCopyFromSegment', '', true, true)]
+    local procedure extOnAfterCopyFromSeg(SegmentLine: Record "Segment Line";var InteractionLogEntry: Record "Interaction Log Entry")
+    begin
+        InteractionLogEntry."LBT Process No." := SegmentLine."LBT Process No.";
+    end;
     
     ///NAVIGATE: Show event
     [EventSubscriber(ObjectType::Page, Page::Navigate, 'OnBeforeNavigateShowRecords', '', True, True)]

@@ -4,7 +4,7 @@ pageextension 5266506 "LBT Process SalesQuote" extends "Sales Quote"//41
     {
         addlast(General)        
         {
-            field("LBT Process No."; "LBT Process No.")
+            field("Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

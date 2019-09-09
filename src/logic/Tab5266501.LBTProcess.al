@@ -41,4 +41,12 @@ table 5266501 "LBT Process"
             NoSeriesMgt.InitSeries(ProcessSetup."Process Nos.",'0',0D,"No.",ProcessSetup."Process Nos.");
         end;
     end;
+    procedure Navigate()
+    var
+        Navigate: Page Navigate;
+    begin
+        Navigate.SetProcessNo("No.");
+        navigate.FindProcess();
+        navigate.run;
+    end;
 }
