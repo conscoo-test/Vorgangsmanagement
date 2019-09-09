@@ -43,6 +43,7 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
     begin
        ProcessNo := p_ProcessNo;
     end;
+    //NAVIGATE:Collect Records
     procedure FindProcess()
     var
         window:Dialog;
@@ -107,6 +108,7 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         PurchInvLn: Record "Purch. Inv. line";
         PurchRcptLn: Record "Purch. Rcpt. line";
         PurchCrMemoLn: Record "Purch. Cr. Memo line";
+        ReturnRcptHdr: Record "Return Receipt Header";
     begin
         IF PurchInvHdr.READPERMISSION THEN BEGIN
             PurchInvHdr.RESET;
@@ -132,6 +134,14 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
             InsertIntoDocEntry(Rec,DATABASE::"Purch. Rcpt. Header",0,PurchrcptHdr.TableCaption,PurchrcptHdr.COUNT);
+        END;
+        IF ReturnRcptHdr.READPERMISSION THEN BEGIN
+            ReturnRcptHdr.RESET;
+            ReturnRcptHdr.SETCURRENTKEY("lbt Process No.");
+            ReturnRcptHdr.SETFILTER("lbt Process No.",ProcessNo);
+            //IF PostingDateFilter <> '' THEN
+            //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
+            InsertIntoDocEntry(Rec,DATABASE::"return Receipt Header",0,returnrcptHdr.TableCaption,PurchrcptHdr.COUNT);
         END;
     end;
 
@@ -169,6 +179,7 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         SalesInvLn: Record "Sales Invoice Line";
         SalesShptLn: Record "Sales Shipment Line";
         SalesCrMemoLn: Record "Sales Cr.Memo Line";
+        ReturnShptHdr: Record  "Return Shipment Header";
     begin
         IF SalesInvHdr.READPERMISSION THEN BEGIN
             SalesInvHdr.RESET;
@@ -193,7 +204,15 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
             SalesShptHdr.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"Purch. Rcpt. Header",0,SalesShptHdr.TableCaption,SalesShptHdr.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"sales shipment Header",0,SalesShptHdr.TableCaption,SalesShptHdr.COUNT);
+        END;
+        IF ReturnShptHdr.READPERMISSION THEN BEGIN
+            ReturnShptHdr.RESET;
+            ReturnShptHdr.SETCURRENTKEY("lbt Process No.");
+            ReturnShptHdr.SETFILTER("lbt Process No.",ProcessNo);
+            //IF PostingDateFilter <> '' THEN
+            //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
+            InsertIntoDocEntry(Rec,DATABASE::"return shipment Header",0,ReturnShptHdr.TableCaption,SalesShptHdr.COUNT);
         END;
     end;
     local procedure FindEntries()

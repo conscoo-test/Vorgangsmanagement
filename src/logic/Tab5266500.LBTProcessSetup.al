@@ -1,9 +1,7 @@
 table 5266500 "LBT Process Setup"
 {
     ///NAVIGATE: SetupTable
-    ///TODO:hier weiter
-    ///FIXME:ertetzztu
-    ///NOTE://
+    
     fields
     {
         field(1; "Primary Key"; Code[10])
