@@ -4,7 +4,7 @@ tableextension 5266536  "LBT Process RetShipmentLine" extends "Return Shipment L
     {
         field(5266500; "LBT Process No."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }
     }

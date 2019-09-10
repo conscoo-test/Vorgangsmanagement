@@ -4,7 +4,7 @@ tableextension 5266514 "LBT Process SalesCRMHeader" extends "Sales Cr.Memo Heade
     {
         field(5266500; "LBT Process No."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }
     }

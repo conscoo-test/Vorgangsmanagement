@@ -4,7 +4,7 @@ pageextension 5266515 "LBT Process PostSalesShipment" extends "Posted Sales Ship
     {
         addlast(General)        
         {
-            field("Process No."; "LBT Process No.")
+            field("LBT Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

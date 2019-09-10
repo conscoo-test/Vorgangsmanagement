@@ -4,7 +4,7 @@ tableextension 5266508 "LBT Process Gen. Journal Line" extends "Gen. Journal Lin
     {
         field(5266500; "LBT Process No."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }
     }

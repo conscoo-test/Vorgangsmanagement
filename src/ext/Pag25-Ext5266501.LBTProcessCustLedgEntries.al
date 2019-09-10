@@ -4,8 +4,9 @@ pageextension 5266501 "LBT Process CustLedgEntries" extends "customer ledger ent
     {
         addlast(control1)
         {
-            field("Process No."; "LBT Process No.")
+            field("LBT Process No."; "LBT Process No.")
             {
+                
                 ApplicationArea=ALL;    
             }
         }

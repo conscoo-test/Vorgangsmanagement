@@ -4,7 +4,7 @@ pageextension 5266509 "LBT Process SalesCRM" extends "Sales Credit Memo"//44
     {
         addlast(General)        
         {
-            field("Process No."; "LBT Process No.")
+            field("LBT Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

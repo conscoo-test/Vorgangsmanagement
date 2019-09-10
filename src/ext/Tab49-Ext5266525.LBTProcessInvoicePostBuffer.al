@@ -4,7 +4,7 @@ tableextension 5266525 "LBT Process InvoicePostBuffer" extends "Invoice Post. Bu
     {
         field(5266500; "LBT Process No."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }
     }

@@ -4,7 +4,7 @@ tableextension 5266530  "LBT Process EmployeeLedgEntry" extends "Employee Ledger
     {
         field(5266500; "LBT Process No."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }
     }

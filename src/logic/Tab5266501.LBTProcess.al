@@ -9,16 +9,16 @@ table 5266501 "LBT Process"
     {
         field(1; "No."; code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
         }
         field(5; Description; text[80])
         {
-            DataClassification=ToBeClassified;
+            DataClassification=CustomerContent;
         }
         field(10;"Record ID";recordid)
         {
-            DataClassification=ToBeClassified;
+            DataClassification=CustomerContent;
         }
         
     }
@@ -35,7 +35,7 @@ table 5266501 "LBT Process"
         ProcessSetup: Record "LBT Process Setup";
         NoSeriesMgt: Codeunit NoSeriesManagement;
     begin
-        ProcessSetup.get;
+        ProcessSetup.get();
         if "no." = '' then begin
             ProcessSetup.TestField(ProcessSetup."Process Nos.");
             NoSeriesMgt.InitSeries(ProcessSetup."Process Nos.",'0',0D,"No.",ProcessSetup."Process Nos.");
@@ -47,6 +47,6 @@ table 5266501 "LBT Process"
     begin
         Navigate.SetProcessNo("No.");
         navigate.FindProcess();
-        navigate.run;
+        navigate.run();
     end;
 }

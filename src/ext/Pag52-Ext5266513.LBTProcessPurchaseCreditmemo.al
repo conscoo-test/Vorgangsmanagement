@@ -4,7 +4,7 @@ pageextension 5266513 "LBT Process PurchaseCreditmemo" extends "Purchase Credit 
     {
         addlast(General)        
         {
-            field("Process No."; "LBT Process No.")
+            field("LBT Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

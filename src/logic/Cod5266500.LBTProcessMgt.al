@@ -5,8 +5,6 @@ codeunit 5266500 "LBT Process Mgt."
         
     end;
     
-    var
-        myInt: Integer;
     procedure CreateSalesProcess(var SalesHdr: Record "Sales Header")
     var
         ProcessSetup: Record "LBT Process Setup";
@@ -14,9 +12,9 @@ codeunit 5266500 "LBT Process Mgt."
     begin
         ProcessSetup.TestField("Process Nos.");
         if not process.get(SalesHdr."LBT Process No.") then begin
-            Process.init;
+            Process.init();
             process."No." := '';
-            Process."Record ID" := SalesHdr.RecordId;
+            Process."Record ID" := SalesHdr.RecordId();
             Process.Description := SalesHdr."Posting Description";
             process.insert(true);
         end; 
@@ -28,9 +26,9 @@ codeunit 5266500 "LBT Process Mgt."
     begin
         ProcessSetup.TestField("Process Nos.");
         if not process.get(PurchHdr."LBT Process No.") then begin
-            Process.init;
+            Process.init();
             process."No." := '';
-            Process."Record ID" := PurchHdr.RecordId;
+            Process."Record ID" := PurchHdr.RecordId();
             Process.Description := PurchHdr."Posting Description";
             process.insert(true);
         end; 
@@ -189,9 +187,9 @@ codeunit 5266500 "LBT Process Mgt."
     [EventSubscriber(ObjectType::Page, Page::Navigate, 'OnBeforeNavigateShowRecords', '', True, True)]
     local procedure OnBeforeNavigateShowRecords(TableID: Integer;var TempDocumentEntry: Record "Document Entry";var IsHandled: Boolean)
     var
+        PageMgt: Codeunit "Page Management";
         RecRef:recordref;
         fref:FieldRef;
-        PageMgt: Codeunit "Page Management";
         vari:Variant;
     begin
         if isHandled then
@@ -202,19 +200,19 @@ codeunit 5266500 "LBT Process Mgt."
         recref.open(TempDocumentEntry."Table ID");
         fref := recref.Field(5266500);
         fref.setfilter(TempDocumentEntry."LBT Process No.");
-        if TempDocumentEntry."Table ID" in[database::"Sales Header",database::"Purchase Header"] then begin
+        if TempDocumentEntry."Table ID" in [database::"Sales Header",database::"Purchase Header"] then begin
             fref := recref.field(1);
             fref.setrange(TempDocumentEntry."Document Type");
             recref.findfirst();
         end;
         //pagemgt.PageRun(recref);
 
-        if recref.count = 1 then begin
+        if recref.count() = 1 then begin
             vari := RecRef;
-            page.run(PageMgt.GetDefaultCardPageID(RecRef.Number),vari);
-        end else begin
+            page.run(PageMgt.GetDefaultCardPageID(RecRef.Number()),vari);
+        end else 
             pagemgt.PageRun(recref);
-        end;
+        
         isHandled := true;
 
     end;

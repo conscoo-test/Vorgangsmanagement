@@ -4,7 +4,7 @@ tableextension 5266515 "LBT Process SalesCRMLine" extends "Sales Cr.Memo Line"//
     {
         field(5266500; "LBT Process No."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }
     }

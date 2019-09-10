@@ -4,7 +4,7 @@ tableextension 5266534 "LBT Process JobPlanningLine" extends "Job Planning Line"
     {
         field(5266500; "LBT Process No."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }
     }

@@ -27,9 +27,9 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
                 PromotedCategory=Process;
                 trigger OnAction()
                 begin
-                    if ProcessNo <> '' then begin
+                    if ProcessNo <> '' then
                         FindProcess();
-                    end;    
+                        
                 end;
 
             }
@@ -47,11 +47,11 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
     procedure FindProcess()
     var
         window:Dialog;
-        Text002:Label 'Search';        
+        Text002Msg:Label 'Search';        
     begin
-        window.Open(Text002);
-        reset;
-        deleteall;
+        window.Open(Text002Msg);
+        reset();
+        deleteall();
         "Entry No." := 0;
         //foundRecords := False;
         FindUnpostedPurchDocs();
@@ -70,7 +70,7 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         //SetSource(0D,'','',0,'');
         //MESSAGE(LBText025);
         //END;
-        Window.CLOSE;
+        Window.CLOSE();
 
 
     end;
@@ -81,7 +81,7 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         
         i:integer;
     begin
-        if not PurchHdr.ReadPermission then
+        if not PurchHdr.ReadPermission() then
             exit;
         PurchHdr.SetCurrentKey("Document Type","LBT Process No.");
         PurchHdr.setfilter("LBT Process No.",ProcessNo);
@@ -95,7 +95,7 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
                 6: PurchHdr2."Document Type" := PurchHdr2."Document Type"::"Blanket Order";
             end;    
             PurchHdr.setrange("Document Type",PurchHdr2."Document Type");
-            InsertIntoDocEntry(rec,database::"Purchase Header",PurchHdr2."Document Type",format(PurchHdr2."Document Type"),PurchHdr.count);
+            InsertIntoDocEntry(rec,database::"Purchase Header",PurchHdr2."Document Type",format(PurchHdr2."Document Type"),PurchHdr.count());
  
         end;
 
@@ -110,38 +110,38 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         PurchCrMemoLn: Record "Purch. Cr. Memo line";
         ReturnRcptHdr: Record "Return Receipt Header";
     begin
-        IF PurchInvHdr.READPERMISSION THEN BEGIN
-            PurchInvHdr.RESET;
+        IF PurchInvHdr.READPERMISSION() THEN BEGIN
+            PurchInvHdr.RESET();
             PurchInvHdr.SETCURRENTKEY("Lbt Process No.");
             PurchInvHdr.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchInvHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"Purch. Inv. Header",0,PurchInvHdr.TableCaption,PurchInvHdr.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"Purch. Inv. Header",0,PurchInvHdr.TableCaption(),PurchInvHdr.COUNT());
         END;
 
-        IF PurchCrMemoHdr.READPERMISSION THEN BEGIN
-            PurchCrMemoHdr.RESET;
+        IF PurchCrMemoHdr.READPERMISSION() THEN BEGIN
+            PurchCrMemoHdr.RESET();
             PurchCrMemoHdr.SETCURRENTKEY("lbt Process No.");
             PurchCrMemoHdr.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"Purch. Cr. Memo Hdr.",0,PurchCrMemoHdr.TableCaption,PurchCrMemoHdr.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"Purch. Cr. Memo Hdr.",0,PurchCrMemoHdr.TableCaption(),PurchCrMemoHdr.COUNT());
         END;
-        IF PurchRcptHdr.READPERMISSION THEN BEGIN
-            PurchRcptHdr.RESET;
+        IF PurchRcptHdr.READPERMISSION() THEN BEGIN
+            PurchRcptHdr.RESET();
             PurchRcptHdr.SETCURRENTKEY("lbt Process No.");
             PurchRcptHdr.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"Purch. Rcpt. Header",0,PurchrcptHdr.TableCaption,PurchrcptHdr.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"Purch. Rcpt. Header",0,PurchrcptHdr.TableCaption(),PurchrcptHdr.COUNT());
         END;
-        IF ReturnRcptHdr.READPERMISSION THEN BEGIN
-            ReturnRcptHdr.RESET;
+        IF ReturnRcptHdr.READPERMISSION() THEN BEGIN
+            ReturnRcptHdr.RESET();
             ReturnRcptHdr.SETCURRENTKEY("lbt Process No.");
             ReturnRcptHdr.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"return Receipt Header",0,returnrcptHdr.TableCaption,PurchrcptHdr.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"return Receipt Header",0,returnrcptHdr.TableCaption(),PurchrcptHdr.COUNT());
         END;
     end;
 
@@ -152,7 +152,7 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         
         i:integer;
     begin
-        if not SalesHdr.ReadPermission then
+        if not SalesHdr.ReadPermission() then
             exit;
         SalesHdr.SetCurrentKey("Document Type","LBT Process No.");
         SalesHdr.setfilter("LBT Process No.",ProcessNo);
@@ -166,7 +166,7 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
                 6: SalesHdr2."Document Type" := SalesHdr2."Document Type"::"Blanket Order";
             end;    
             SalesHdr.setrange("Document Type",SalesHdr2."Document Type");
-            InsertIntoDocEntry(rec,database::"Sales Header",SalesHdr2."Document Type",format(SalesHdr2."Document Type"),SalesHdr.count);
+            InsertIntoDocEntry(rec,database::"Sales Header",SalesHdr2."Document Type",format(SalesHdr2."Document Type"),SalesHdr.count());
 
         end;
 
@@ -181,38 +181,38 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         SalesCrMemoLn: Record "Sales Cr.Memo Line";
         ReturnShptHdr: Record  "Return Shipment Header";
     begin
-        IF SalesInvHdr.READPERMISSION THEN BEGIN
-            SalesInvHdr.RESET;
+        IF SalesInvHdr.READPERMISSION() THEN BEGIN
+            SalesInvHdr.RESET();
             SalesInvHdr.SETCURRENTKEY("Lbt Process No.");
             SalesInvHdr.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchInvHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"Sales Invoice Header",0,salesInvHdr.TableCaption,salesInvHdr.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"Sales Invoice Header",0,salesInvHdr.TableCaption(),salesInvHdr.COUNT());
         END;
 
-        IF SalesCrMemoHdr.READPERMISSION THEN BEGIN
-            SalesCrMemoHdr.RESET;
+        IF SalesCrMemoHdr.READPERMISSION() THEN BEGIN
+            SalesCrMemoHdr.RESET();
             SalesCrMemoHdr.SETCURRENTKEY("lbt Process No.");
             SalesCrMemoHdr.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"Sales Cr.Memo Header",0,SalesCrMemoHdr.TableCaption,salesCrMemoHdr.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"Sales Cr.Memo Header",0,SalesCrMemoHdr.TableCaption(),salesCrMemoHdr.COUNT());
         END;
-        IF SalesShptHdr.READPERMISSION THEN BEGIN
-            SalesShptHdr.RESET;
+        IF SalesShptHdr.READPERMISSION() THEN BEGIN
+            SalesShptHdr.RESET();
             SalesShptHdr.SETCURRENTKEY("lbt Process No.");
             SalesShptHdr.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"sales shipment Header",0,SalesShptHdr.TableCaption,SalesShptHdr.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"sales shipment Header",0,SalesShptHdr.TableCaption(),SalesShptHdr.COUNT());
         END;
-        IF ReturnShptHdr.READPERMISSION THEN BEGIN
-            ReturnShptHdr.RESET;
+        IF ReturnShptHdr.READPERMISSION() THEN BEGIN
+            ReturnShptHdr.RESET();
             ReturnShptHdr.SETCURRENTKEY("lbt Process No.");
             ReturnShptHdr.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"return shipment Header",0,ReturnShptHdr.TableCaption,SalesShptHdr.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"return shipment Header",0,ReturnShptHdr.TableCaption(),SalesShptHdr.COUNT());
         END;
     end;
     local procedure FindEntries()
@@ -227,71 +227,71 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         JobLedgEntry: Record "Job Ledger Entry";
 
     begin
-        IF GLEntry.READPERMISSION THEN BEGIN
-            GLEntry.RESET;
+        IF GLEntry.READPERMISSION() THEN BEGIN
+            GLEntry.RESET();
             GLEntry.SETCURRENTKEY("lbt Process No.");
             GLEntry.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //GLEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"G/L Entry",0,GLEntry.TABLECAPTION,GLEntry.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"G/L Entry",0,GLEntry.TABLECAPTION(),GLEntry.COUNT());
         END;
 
-        IF VendLedgEntry.READPERMISSION THEN BEGIN
-            VendLedgEntry.RESET;
+        IF VendLedgEntry.READPERMISSION() THEN BEGIN
+            VendLedgEntry.RESET();
             VendLedgEntry.SETCURRENTKEY("lbt Process No.");
             VendLedgEntry.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //VendLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"Vendor Ledger Entry",0,VendLedgEntry.TABLECAPTION,VendLedgEntry.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"Vendor Ledger Entry",0,VendLedgEntry.TABLECAPTION(),VendLedgEntry.COUNT());
         END;
 
-        IF CustLedgEntry.READPERMISSION THEN BEGIN
-            CustLedgEntry.RESET;
+        IF CustLedgEntry.READPERMISSION() THEN BEGIN
+            CustLedgEntry.RESET();
             CustLedgEntry.SETCURRENTKEY("lbt Process No.");
             CustLedgEntry.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"Cust. Ledger Entry",0,CustLedgEntry.TABLECAPTION,CustLedgEntry.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"Cust. Ledger Entry",0,CustLedgEntry.TABLECAPTION(),CustLedgEntry.COUNT());
         END;
-        IF employeeLedgEntry.READPERMISSION THEN BEGIN
-            employeeLedgEntry.RESET;
+        IF employeeLedgEntry.READPERMISSION() THEN BEGIN
+            employeeLedgEntry.RESET();
             employeeLedgEntry.SETCURRENTKEY("lbt Process No.");
             employeeLedgEntry.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"employee Ledger Entry",0,employeeLedgEntry.TABLECAPTION,employeeLedgEntry.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"employee Ledger Entry",0,employeeLedgEntry.TABLECAPTION(),employeeLedgEntry.COUNT());
         END;
-        IF itemLedgEntry.READPERMISSION THEN BEGIN
-            itemLedgEntry.RESET;
+        IF itemLedgEntry.READPERMISSION() THEN BEGIN
+            itemLedgEntry.RESET();
             itemLedgEntry.SETCURRENTKEY("lbt Process No.");
             itemLedgEntry.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"item Ledger Entry",0,itemLedgEntry.TABLECAPTION,itemLedgEntry.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"item Ledger Entry",0,itemLedgEntry.TABLECAPTION(),itemLedgEntry.COUNT());
         END;
-        IF jobLedgEntry.READPERMISSION THEN BEGIN
-            jobLedgEntry.RESET;
+        IF jobLedgEntry.READPERMISSION() THEN BEGIN
+            jobLedgEntry.RESET();
             jobLedgEntry.SETCURRENTKEY("lbt Process No.");
             jobLedgEntry.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"job Ledger Entry",0,jobLedgEntry.TABLECAPTION,jobLedgEntry.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"job Ledger Entry",0,jobLedgEntry.TABLECAPTION(),jobLedgEntry.COUNT());
         END;
-        IF resLedgEntry.READPERMISSION THEN BEGIN
-            resLedgEntry.RESET;
+        IF resLedgEntry.READPERMISSION() THEN BEGIN
+            resLedgEntry.RESET();
             resLedgEntry.SETCURRENTKEY("lbt Process No.");
             resLedgEntry.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"res. Ledger Entry",0,resLedgEntry.TABLECAPTION,resLedgEntry.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"res. Ledger Entry",0,resLedgEntry.TABLECAPTION(),resLedgEntry.COUNT());
         END;
-        IF InteractLogEntry.READPERMISSION THEN BEGIN
-            InteractLogEntry.RESET;
+        IF InteractLogEntry.READPERMISSION() THEN BEGIN
+            InteractLogEntry.RESET();
             InteractLogEntry.SETCURRENTKEY("lbt Process No.");
             InteractLogEntry.SETFILTER("lbt Process No.",ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec,DATABASE::"Interaction Log Entry",0,InteractLogEntry.TABLECAPTION,InteractLogEntry.COUNT);
+            InsertIntoDocEntry(Rec,DATABASE::"Interaction Log Entry",0,InteractLogEntry.TABLECAPTION(),InteractLogEntry.COUNT());
         END;
     end;
             

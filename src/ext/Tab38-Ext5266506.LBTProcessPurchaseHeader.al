@@ -4,7 +4,7 @@ tableextension 5266506 "LBT Process Purchase Header" extends "Purchase Header"//
     {
         field(5266500; "LBT Process No."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }
     }

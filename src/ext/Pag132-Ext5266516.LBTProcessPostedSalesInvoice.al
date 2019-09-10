@@ -4,7 +4,7 @@ pageextension 5266516 "LBT Process PostedSalesInvoice" extends "Posted Sales Inv
     {
         addlast(General)        
         {
-            field("Process No."; "LBT Process No.")
+            field("LBT Process No."; "LBT Process No.")
             {
                 ApplicationArea=ALL;    
             }

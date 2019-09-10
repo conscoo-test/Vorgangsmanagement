@@ -4,7 +4,7 @@ tableextension 5266512 "LBT Process SalesInvHeader" extends "Sales Invoice Heade
     {
         field(5266500; "LBT Process No."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }
     }

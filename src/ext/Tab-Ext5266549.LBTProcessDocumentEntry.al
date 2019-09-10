@@ -4,10 +4,8 @@ tableextension 5266549 "LBT ProcessDocumentEntry" extends "Document entry"
     {
         field(5266500; "LBT Process No."; Code[50])
         {
-            DataClassification=ToBeClassified;
+            DataClassification=CustomerContent;
         }
     }
     
-    var
-        myInt: Integer;
 }

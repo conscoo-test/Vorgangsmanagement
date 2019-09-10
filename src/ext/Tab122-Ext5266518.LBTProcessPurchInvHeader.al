@@ -4,7 +4,7 @@ tableextension 5266518 "LBT Process PurchInvHeader" extends "Purch. Inv. Header"
     {
         field(5266500; "LBT Process No."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }
     }
