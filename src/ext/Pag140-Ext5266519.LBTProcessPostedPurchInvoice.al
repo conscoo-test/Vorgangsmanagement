@@ -6,6 +6,7 @@ pageextension 5266519 "LBT Process PostedPurchInvoice" extends "Posted Purchase 
         {
             field("LBT Process No."; "LBT Process No.")
             {
+                ToolTip = 'Here you select the process number.', comment = 'DEU="Hier wählen Sie die Vorgangsnummer aus."';
                 ApplicationArea=ALL;    
             }
         }
