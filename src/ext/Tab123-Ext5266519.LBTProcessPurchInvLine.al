@@ -4,6 +4,7 @@ tableextension 5266519 "LBT Process PurchInvLine" extends "Purch. Inv. Line"//12
     {
         field(5266500; "LBT Process No."; Code[20])
         {
+            Caption = 'Process No.', comment = 'DEU="Prozessnr."';
             DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }

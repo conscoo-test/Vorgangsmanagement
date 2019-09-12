@@ -1,23 +1,26 @@
 table 5266501 "LBT Process"
 {
     DataClassification = ToBeClassified;
-    LookupPageId = "lbt process list";
-    DrillDownPageId = "lbt process list";
+    LookupPageId = "LBT process list";
+    DrillDownPageId = "LBT process list";
 
 
     fields
     {
         field(1; "No."; code[20])
         {
+            Caption = 'Process No.', comment = 'DEU="Prozessnr."';
             DataClassification = CustomerContent;
 
         }
         field(5; Description; text[80])
         {
+            Caption = 'Description', comment = 'DEU="Beschreibung"';
             DataClassification = CustomerContent;
         }
         field(10; "Record ID"; recordid)
         {
+            Caption = 'Record ID', comment = 'DEU="Record ID"';
             DataClassification = CustomerContent;
         }
 

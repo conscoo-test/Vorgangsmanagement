@@ -4,6 +4,7 @@ tableextension 5266533  "LBT Process JobJnlLine" extends "Job Journal Line"//210
     {
         field(5266500; "LBT Process No."; Code[20])
         {
+            Caption = 'Process No.', comment = 'DEU="Prozessnr."';
             DataClassification = CustomerContent;
             TableRelation = "LBT Process";
         }

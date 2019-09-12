@@ -6,10 +6,12 @@ table 5266500 "LBT Process Setup"
     {
         field(1; "Primary Key"; Code[10])
         {
+            Caption = 'Primary Key', comment = 'DEU="Primärschlüssel"';
             DataClassification= CustomerContent;
         }
         field(2; "Process Nos."; code[20])
         {
+            Caption = 'Process Nos.', comment = 'DEU="Prozess Nummernserie"';
             TableRelation="No. Series";
             DataClassification=CustomerContent;
         }
