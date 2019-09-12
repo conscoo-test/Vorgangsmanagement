@@ -52,10 +52,11 @@ table 5266501 "LBT Process"
     end;
 
     procedure newProcess(var ProcessNo: Code[20])
+    var 
+        Text001Msg: Label 'Do you really want to get a new process number and overwrite the old process number?' , Comment = 'DEU="Wollen Sie wirklich eine neue Vorgangsnummer ziehen und die alte Vorgangsnummer überschreiben?"';
     begin
-
         if ProcessNo <> '' then
-            if not Confirm('Neuer Vorgangs???') then
+            if not Confirm(Text001Msg) then
                 exit;
         Init();
         "No." := '';
