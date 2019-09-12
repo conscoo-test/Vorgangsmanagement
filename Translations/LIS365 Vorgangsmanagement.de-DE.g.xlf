@@ -50,6 +50,24 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page LBT Process List - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2479506013 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This column is filled automatically or manually with the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Diese Spalte wird mit der Vorgangsnummer automatisch oder manuell befüllt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page LBT Process List - Control No. - Property ToolTip</note>
+          <target>Diese Spalte wird mit der Vorgangsnummer automatisch oder manuell befüllt.</target>
+        </trans-unit>
+        <trans-unit id="Page 2479506013 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Here is the description of the process.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier steht die Beschreibung des Vorgangs."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page LBT Process List - Control Description - Property ToolTip</note>
+          <target>Hier steht die Beschreibung des Vorgangs.</target>
+        </trans-unit>
+        <trans-unit id="Page 2479506013 - Action 3538210097 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The entries belonging to the transaction are counted.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Die zugehörigen Posten zu dem Vorgang werden gezählt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page LBT Process List - Action Navigate - Property ToolTip</note>
+          <target>Die zugehörigen Posten zu dem Vorgang werden gezählt.</target>
+        </trans-unit>
         <trans-unit id="PageExtension 322305082 - Control 2114761722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Here you select the process number.</source>
           <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
@@ -217,6 +235,18 @@
           <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT Process PostedReturnRcpt - Control LBT Process No. - Property ToolTip</note>
           <target>Hier wählen Sie die Vorgangsnummer aus.</target>
+        </trans-unit>
+        <trans-unit id="PageExtension 947117746 - Control 2114761722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT ProcessNavigate - Control LBT Process No. - Property ToolTip</note>
+          <target>Hier wählen Sie die Vorgangsnummer aus.</target>
+        </trans-unit>
+        <trans-unit id="PageExtension 947117746 - Action 1385098307 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Display entries corresponding to the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Zugehörige Posten der Vorgangsnummer anzeigen."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT ProcessNavigate - Action LBT Navigate Process No. - Property ToolTip</note>
+          <target>Zugehörige Posten der Vorgangsnummer anzeigen.</target>
         </trans-unit>
         <trans-unit id="PageExtension 947117746 - Method 2239230202 - NamedType 1068754970" size-unit="char" translate="yes" xml:space="preserve">
           <source>Search</source>
