@@ -7,7 +7,8 @@ pageextension 5266502 "LBT Process VendLedgEntries" extends "vendor ledger entri
             field("LBT Process No."; "LBT Process No.")
             {
                 ToolTip = 'The process number is stored in this field.', comment = 'DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."';
-                ApplicationArea=ALL;    
+                ApplicationArea=ALL;   
+                Editable= false;  
             }
         }
         // Add changes to page layout here

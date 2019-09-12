@@ -6,7 +6,7 @@ pageextension 5266523 "LBT Process ResourceJournal" extends "resource Journal"//
         {
             field("LBT Process No."; "LBT Process No.")
             {
-                ToolTip = 'The process number is stored in this field.', comment = 'DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."';
+                ToolTip = 'Here you select the process number.', comment = 'DEU="Hier wählen Sie die Vorgangsnummer aus."';
                 ApplicationArea=ALL;    
             }
         }

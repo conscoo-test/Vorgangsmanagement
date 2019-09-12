@@ -6,8 +6,9 @@ pageextension 5266505 "LBT Process ItemJournal" extends "item Journal"//40
         {
             field("LBT Process No."; "LBT Process No.")
             {
-                ToolTip = 'The process number is stored in this field.', comment = 'DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."';
-                ApplicationArea=ALL;    
+                ToolTip = 'Here you select the process number.', comment = 'DEU="Hier wählen Sie die Vorgangsnummer aus."';
+                ApplicationArea=ALL;  
+                  
             }
         }
         // Add changes to page layout here

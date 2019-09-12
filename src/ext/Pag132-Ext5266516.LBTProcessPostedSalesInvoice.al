@@ -8,6 +8,7 @@ pageextension 5266516 "LBT Process PostedSalesInvoice" extends "Posted Sales Inv
             {
                 ToolTip = 'The process number is stored in this field.', comment = 'DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."';
                 ApplicationArea=ALL;    
+                Editable= false;
             }
         }
         // Add changes to page layout here
