@@ -4,7 +4,7 @@ table 5266501 "LBT Process"
     LookupPageId = "lbt process list";
     DrillDownPageId = "lbt process list";
 
-    
+
     fields
     {
         field(1; "No."; code[20])
@@ -14,15 +14,15 @@ table 5266501 "LBT Process"
         }
         field(5; Description; text[80])
         {
-            DataClassification=CustomerContent;
+            DataClassification = CustomerContent;
         }
-        field(10;"Record ID";recordid)
+        field(10; "Record ID"; recordid)
         {
-            DataClassification=CustomerContent;
+            DataClassification = CustomerContent;
         }
-        
+
     }
-    
+
     keys
     {
         key(PK; "no.")
@@ -38,9 +38,10 @@ table 5266501 "LBT Process"
         ProcessSetup.get();
         if "no." = '' then begin
             ProcessSetup.TestField(ProcessSetup."Process Nos.");
-            NoSeriesMgt.InitSeries(ProcessSetup."Process Nos.",'0',0D,"No.",ProcessSetup."Process Nos.");
+            NoSeriesMgt.InitSeries(ProcessSetup."Process Nos.", '0', 0D, "No.", ProcessSetup."Process Nos.");
         end;
     end;
+
     procedure Navigate()
     var
         Navigate: Page Navigate;
@@ -48,5 +49,17 @@ table 5266501 "LBT Process"
         Navigate.SetProcessNo("No.");
         navigate.FindProcess();
         navigate.run();
+    end;
+
+    procedure newProcess(var ProcessNo: Code[20])
+    begin
+
+        if ProcessNo <> '' then
+            if not Confirm('Neuer Vorgangs???') then
+                exit;
+        Init();
+        "No." := '';
+        Insert(true);
+        ProcessNo := "No.";
     end;
 }

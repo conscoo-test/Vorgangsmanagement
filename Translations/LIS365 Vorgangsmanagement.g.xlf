@@ -104,13 +104,13 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT Process GenLedgEntries - Control LBT Process No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 830772817 - Control 2114761722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The process number is stored in this field.</source>
-          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT Process JobJournal - Control LBT Process No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2456318014 - Control 2114761722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The process number is stored in this field.</source>
-          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT Process ResourceJournal - Control LBT Process No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 270556532 - Control 2114761722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -123,19 +123,24 @@
           <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT Process VendLedgEntries - Control LBT Process No. - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1732356588 - Control 2114761722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT Process VAT Entries - Control LBT Process No. - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3826892240 - Control 2114761722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>The process number is stored in this field.</source>
           <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT Process ItemLedgEntries - Control LBT Process No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 1188137912 - Control 2114761722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The process number is stored in this field.</source>
-          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT Process GenJournal - Control LBT Process No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 4186677175 - Control 2114761722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The process number is stored in this field.</source>
-          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension LBT Process ItemJournal - Control LBT Process No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3069020349 - Control 2114761722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -317,6 +322,11 @@
           <source>LBT Process No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension LBT ProcessVendorLedgerEntry - Field LBT Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 206159314 - Field 2114761722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>LBT Process No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension LBT Process VAT Entry - Field LBT Process No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1083336999 - Field 2114761722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>LBT Process No.</source>

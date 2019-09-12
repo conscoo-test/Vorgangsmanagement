@@ -182,6 +182,12 @@ codeunit 5266500 "LBT Process Mgt."
     begin
         InteractionLogEntry."LBT Process No." := SegmentLine."LBT Process No.";
     end;
+
+    [EventSubscriber(ObjectType::Table, Database::"VAT Entry", 'OnAfterCopyFromGenJnlLine', '', true, true)]
+    local procedure extOnAfterCopyFromVATEntry(GenJournalLine: Record "Gen. Journal Line";var VATEntry: Record "VAT Entry")
+    begin
+        VATEntry."LBT Process No." := GenJournalLine."LBT Process No.";
+    end;
     
     ///NAVIGATE: Show event
     [EventSubscriber(ObjectType::Page, Page::Navigate, 'OnBeforeNavigateShowRecords', '', True, True)]
