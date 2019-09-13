@@ -188,6 +188,23 @@ codeunit 5266500 "LBT Process Mgt."
     begin
         VATEntry."LBT Process No." := GenJournalLine."LBT Process No.";
     end;
+
+    //ArchivManagement (CU5063)
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::ArchiveManagement, 'OnAfterStoreSalesDocument', '', true, true)]
+    local procedure extSalesHeaderAfterStore(var SalesHeader: Record "Sales Header";var SalesHeaderArchive: Record "Sales Header Archive")
+    begin
+        if SalesHeaderArchive."LBT Process No." = '' then
+            if salesheader."LBT Process No." <> '' then
+                SalesHeaderArchive."LBT Process No." := Salesheader."LBT Process No.";
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::ArchiveManagement, 'OnAfterStorePurchDocument', '', true, true)]
+    local procedure extPurchHeaderAfterStore(var PurchaseHeader: Record "Purchase Header";var PurchaseHeaderArchive: Record "Purchase Header Archive")
+    begin
+        PurchaseHeaderArchive."LBT Process No." := PurchaseHeader."LBT Process No.";
+    end;
+
+
     
     ///NAVIGATE: Show event
     [EventSubscriber(ObjectType::Page, Page::Navigate, 'OnBeforeNavigateShowRecords', '', True, True)]

@@ -1,4 +1,4 @@
-tableextension 5266506 "LBT Process Purchase Header" extends "Purchase Header"//38
+tableextension 5266506 "LBT Process Purchase Header " extends "Purchase Header"//38
 {
     fields
     {

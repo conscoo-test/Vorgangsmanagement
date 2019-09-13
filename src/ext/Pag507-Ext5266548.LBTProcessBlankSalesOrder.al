@@ -1,4 +1,4 @@
-pageextension 5266535 "LBT Process SalesReturnOrder" extends "Sales Return Order"//6630
+pageextension 5266548 "LBT Process Blank Sales Order" extends "Blanket Sales Order"//507
 {
     layout
     {

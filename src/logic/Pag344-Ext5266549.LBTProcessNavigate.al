@@ -60,7 +60,9 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         FindUnpostedPurchDocs();
         FindpostedPurchDocs();
         FindUnpostedSalesDocs();
-        findPostedSalesDocs();
+        FindPostedSalesDocs();
+        FindArchivSalesDocs();
+        FindArchivPurchDocs();
         findEntries();
         rec.ModifyAll("LBT Process No.", ProcessNo);
         onAfterInsertDocEntries(Rec, ProcessNo);
@@ -75,6 +77,70 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         //END;
         Window.CLOSE();
 
+
+    end;
+
+local procedure FindArchivSalesDocs()
+    var
+        SalesHdrArchiv: Record "Sales Header Archive";
+        SalesHdrArchiv2: Record "Sales Header Archive";
+
+        i: integer;
+    begin
+        if not SalesHdrArchiv.ReadPermission() then
+            exit;
+        SalesHdrArchiv.SetCurrentKey("Document Type", "LBT Process No.");
+        SalesHdrArchiv.setfilter("LBT Process No.", ProcessNo);
+        for i := 1 to 6 do begin
+            case i of
+                1:
+                    SalesHdrArchiv2."Document Type" := SalesHdrArchiv2."Document Type"::Quote;
+                2:
+                    SalesHdrArchiv2."Document Type" := SalesHdrArchiv2."Document Type"::order;
+                3:
+                    SalesHdrArchiv2."Document Type" := SalesHdrArchiv2."Document Type"::invoice;
+                4:
+                    SalesHdrArchiv2."Document Type" := SalesHdrArchiv2."Document Type"::"Credit Memo";
+                5:
+                    SalesHdrArchiv2."Document Type" := SalesHdrArchiv2."Document Type"::"Return Order";
+                6:
+                    SalesHdrArchiv2."Document Type" := SalesHdrArchiv2."Document Type"::"Blanket Order";
+            end;
+            SalesHdrArchiv.setrange("Document Type", SalesHdrArchiv2."Document Type");
+            InsertIntoDocEntry(rec, database::"Purchase Header", SalesHdrArchiv2."Document Type", format(SalesHdrArchiv2."Document Type"), SalesHdrArchiv.count());
+        end;
+
+    end;
+local procedure FindArchivPurchDocs()
+    var
+        PurchHdrArchiv: Record "Purchase Header Archive";
+        PurchHdrArchiv2: Record "Purchase Header Archive";
+
+        i: integer;
+    begin
+        if not PurchHdrArchiv.ReadPermission() then
+            exit;
+        PurchHdrArchiv.SetCurrentKey("Document Type", "LBT Process No.");
+        PurchHdrArchiv.setfilter("LBT Process No.", ProcessNo);
+        for i := 1 to 6 do begin
+            case i of
+                1:
+                    PurchHdrArchiv2."Document Type" := PurchHdrArchiv2."Document Type"::Quote;
+                2:
+                    PurchHdrArchiv2."Document Type" := PurchHdrArchiv2."Document Type"::order;
+                3:
+                    PurchHdrArchiv2."Document Type" := PurchHdrArchiv2."Document Type"::invoice;
+                4:
+                    PurchHdrArchiv2."Document Type" := PurchHdrArchiv2."Document Type"::"Credit Memo";
+                5:
+                    PurchHdrArchiv2."Document Type" := PurchHdrArchiv2."Document Type"::"Return Order";
+                6:
+                    PurchHdrArchiv2."Document Type" := PurchHdrArchiv2."Document Type"::"Blanket Order";
+            end;
+            PurchHdrArchiv.setrange("Document Type", PurchHdrArchiv2."Document Type");
+            InsertIntoDocEntry(rec, database::"Purchase Header", PurchHdrArchiv2."Document Type", format(PurchHdrArchiv2."Document Type"), PurchHdrArchiv.count());
+
+        end;
 
     end;
 
@@ -152,7 +218,7 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
             ReturnRcptHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"return Receipt Header", 0, returnrcptHdr.TableCaption(), PurchrcptHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"return Receipt Header", 0, ReturnRcptHdr.TableCaption(), PurchrcptHdr.COUNT());
         END;
     end;
 
@@ -194,10 +260,9 @@ pageextension 5266549 "LBT ProcessNavigate" extends "Navigate"//344
         SalesInvHdr: Record "Sales Invoice Header";
         SalesShptHdr: Record "Sales Shipment Header";
         SalesCrMemoHdr: Record "Sales Cr.Memo Header";
-        SalesInvLn: Record "Sales Invoice Line";
-        SalesShptLn: Record "Sales Shipment Line";
-        SalesCrMemoLn: Record "Sales Cr.Memo Line";
         ReturnShptHdr: Record "Return Shipment Header";
+        
+
     begin
         IF SalesInvHdr.READPERMISSION() THEN BEGIN
             SalesInvHdr.RESET();

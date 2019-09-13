@@ -1,4 +1,4 @@
-tableextension 5266511 "LBT Process SalesShpLine" extends "Sales Shipment Line"//111
+tableextension 5266543 "LBT Process Purch Line Arch." extends "Purchase Line Archive"//5110
 {
     fields
     {
