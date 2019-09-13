@@ -4,10 +4,20 @@
       {
          "type": "al",
          "request": "launch",
-         "name": "Microsoft cloud sandbox",
+         "name": "recreate",
          "startupObjectId": 22,
          "startupObjectType": "Page",
-         "breakOnError": true
+         "breakOnError": true,
+         "schemaUpdateMode": "Recreate"
+      }
+      {
+         "type": "al",
+         "request": "launch",
+         "name": "Sync",
+         "startupObjectId": 22,
+         "startupObjectType": "Page",
+         "breakOnError": true,
+         "schemaUpdateMode": "Synchronize"
       }
    ]
 }
