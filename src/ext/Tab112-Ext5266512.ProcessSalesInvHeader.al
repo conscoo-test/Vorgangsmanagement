@@ -1,4 +1,4 @@
-tableextension 5266502 "lbt ProcessVendorLedgerEntry" extends "Vendor Ledger Entry"//25
+tableextension 5266512 "lbt Process SalesInvHeader" extends "Sales Invoice Header"//112
 {
     fields
     {
@@ -9,6 +9,5 @@ tableextension 5266502 "lbt ProcessVendorLedgerEntry" extends "Vendor Ledger Ent
             TableRelation = "lbt Process";
         }
     }
-
 
 }

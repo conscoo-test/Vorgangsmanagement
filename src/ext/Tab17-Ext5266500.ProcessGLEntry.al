@@ -1,4 +1,4 @@
-tableextension 5266502 "lbt ProcessVendorLedgerEntry" extends "Vendor Ledger Entry"//25
+tableextension 5266500 "lbt Process G/L Entry" extends "G/L Entry"//17
 {
     fields
     {
@@ -8,7 +8,7 @@ tableextension 5266502 "lbt ProcessVendorLedgerEntry" extends "Vendor Ledger Ent
             DataClassification = CustomerContent;
             TableRelation = "lbt Process";
         }
+        // Add changes to table fields here
     }
-
 
 }

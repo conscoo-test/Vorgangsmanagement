@@ -1,4 +1,4 @@
-tableextension 5266502 "lbt ProcessVendorLedgerEntry" extends "Vendor Ledger Entry"//25
+tableextension 5266539 "lbt Process VAT Entry" extends "VAT Entry"//254
 {
     fields
     {
@@ -7,8 +7,9 @@ tableextension 5266502 "lbt ProcessVendorLedgerEntry" extends "Vendor Ledger Ent
             Caption = 'Process No.', comment = 'DEU="Prozessnr."';
             DataClassification = CustomerContent;
             TableRelation = "lbt Process";
-        }
-    }
 
+        }
+        // Add changes to table fields here
+    }
 
 }

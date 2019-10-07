@@ -1,4 +1,4 @@
-tableextension 5266502 "lbt ProcessVendorLedgerEntry" extends "Vendor Ledger Entry"//25
+tableextension 5266522 "lbt Process JobLedgerEntry" extends "Job Ledger Entry"//169
 {
     fields
     {
@@ -9,6 +9,5 @@ tableextension 5266502 "lbt ProcessVendorLedgerEntry" extends "Vendor Ledger Ent
             TableRelation = "lbt Process";
         }
     }
-
 
 }
