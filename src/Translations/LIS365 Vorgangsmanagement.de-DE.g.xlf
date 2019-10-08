@@ -313,16 +313,16 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostedReturnRcpt - Control lbt Process No. - Property ToolTip</note>
           <target>In diesem Feld ist die Vorgangsnummer hinterlegt.</target>
         </trans-unit>
-        <trans-unit id="PageExtension 1637726034 - Control 4082583232 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+        <trans-unit id="PageExtension 1637726034 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
           <source>Here you select the process number.</source>
           <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Control lbt lbt Process No. - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Control lbt Process No. - Property ToolTip</note>
           <target>Hier wählen Sie die Vorgangsnummer aus.</target>
         </trans-unit>
-        <trans-unit id="PageExtension 1637726034 - Action 3316873789 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+        <trans-unit id="PageExtension 1637726034 - Action 1021501795 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
           <source>Display entries corresponding to the process number.</source>
           <note from="Developer" annotates="general" priority="2">DEU="Zugehörige Posten der Vorgangsnummer anzeigen."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Action lbt lbt Navigate Process No. - Property ToolTip</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Action lbt Navigate Process No. - Property ToolTip</note>
           <target>Zugehörige Posten der Vorgangsnummer anzeigen.</target>
         </trans-unit>
         <trans-unit id="PageExtension 1637726034 - Method 2239230202 - NamedType 1068754970" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
