@@ -1,0 +1,17 @@
+pageextension 5266501 "lbt Process CustLedgEntries" extends "customer ledger entries"//25
+{
+    layout
+    {
+        addlast(control1)
+        {
+            field("lbt Process No."; "lbt Process No.")
+            {
+                ToolTip = 'The process number is stored in this field.', comment = 'DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."';
+                ApplicationArea = ALL;
+                Editable = false;
+            }
+        }
+        // Add changes to page layout here
+    }
+
+}
