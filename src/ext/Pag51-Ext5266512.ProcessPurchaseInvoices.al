@@ -1,8 +1,8 @@
-pageextension 5266512 "lbt Process PurchaseInvoices" extends "Purchase Invoices"//51
+pageextension 5266512 "lbt Process PurchaseInvoices" extends "Purchase Invoice"//51
 {
     layout
     {
-        addlast(Control1)
+        addlast(General)
         {
             field("lbt Process No."; "lbt Process No.")
             {
