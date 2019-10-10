@@ -193,7 +193,7 @@
           <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process Blank Purch. Order - Control lbt Process No. - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2386360468 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4037192291">
+        <trans-unit id="PageExtension 2386360468 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
           <source>Here you select the process number.</source>
           <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PurchaseInvoices - Control lbt Process No. - Property ToolTip</note>
