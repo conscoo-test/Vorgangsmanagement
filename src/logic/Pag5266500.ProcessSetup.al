@@ -3,7 +3,7 @@ page 5266500 "lbt Process Setup"
 
     PageType = Card;
     SourceTable = "lbt Process Setup";
-    Caption = 'Process Setup';
+    Caption = 'Process Setup', Comment = 'DEU="Einrichtung Prozessmanagement"';
     InsertAllowed = false;
     DeleteAllowed = false;
     UsageCategory = Administration;
