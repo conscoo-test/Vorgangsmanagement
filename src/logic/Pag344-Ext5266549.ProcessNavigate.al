@@ -390,7 +390,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
     end;
 
     [BusinessEvent(true)]
-    local procedure onAfterInsertDocEntries(DocEntry: Record "Document Entry"; ProcessNo: code[50])
+    local procedure onAfterInsertDocEntries(var DocEntry: Record "Document Entry"; ProcessNo: code[50])
     begin
 
     end;
