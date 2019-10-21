@@ -6,6 +6,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
         {
             field("lbt Process No."; ProcessNo)
             {
+                Caption = 'Process No.', comment = 'DEU="Prozessnr."';
                 ToolTip = 'Here you select the process number.', comment = 'DEU="Hier wählen Sie die Vorgangsnummer aus."';
                 TableRelation = "lbt process";
                 ApplicationArea = all;
@@ -20,6 +21,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
         {
             action("lbt Navigate Process No.")
             {
+                Caption = 'Navigate Process No.', comment = 'DEU="Navigate Prozessnr."';
                 ToolTip = 'Display entries corresponding to the process number.', comment = 'DEU="Zugehörige Posten der Vorgangsnummer anzeigen."';
                 ApplicationArea = all;
                 image = Navigate;
