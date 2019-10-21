@@ -263,10 +263,20 @@
           <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostedReturnRcpt - Control lbt Process No. - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Control 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Control lbt Process No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1637726034 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
           <source>Here you select the process number.</source>
           <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Action 1021501795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Navigate Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Navigate Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Action lbt Navigate Process No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1637726034 - Action 1021501795 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
           <source>Display entries corresponding to the process number.</source>

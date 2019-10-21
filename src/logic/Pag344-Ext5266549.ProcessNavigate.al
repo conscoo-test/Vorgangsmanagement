@@ -298,7 +298,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             ReturnShptHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"return shipment Header", 0, ReturnShptHdr.TableCaption(), SalesShptHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"return shipment Header", 0, ReturnShptHdr.TableCaption(), ReturnShptHdr.COUNT());
         END;
     end;
 
