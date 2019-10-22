@@ -15,7 +15,7 @@
         </trans-unit>
         <trans-unit id="Page 3697177754 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Process Setup</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">DEU="Einrichtung Prozessmanagement"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page lbt Process Setup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3697177754 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -50,7 +50,7 @@
         </trans-unit>
         <trans-unit id="Page 3169895485 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Process</source>
-          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozess"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page lbt Process List - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3169895485 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -132,6 +132,31 @@
           <source>The process number is stored in this field.</source>
           <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process VAT Entries - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Control 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Control lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Action 1021501795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Navigate Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Navigate Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Action lbt Navigate Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Action 1021501795 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Display entries corresponding to the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Zugehörige Posten der Vorgangsnummer anzeigen."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Action lbt Navigate Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Method 2239230202 - NamedType 1068754970" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Search</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Method FindProcess - NamedType Text002Msg</note>
         </trans-unit>
         <trans-unit id="PageExtension 1437034864 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
           <source>The process number is stored in this field.</source>
@@ -262,21 +287,6 @@
           <source>The process number is stored in this field.</source>
           <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostedReturnRcpt - Control lbt Process No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 1637726034 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
-          <source>Here you select the process number.</source>
-          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Control lbt Process No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 1637726034 - Action 1021501795 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
-          <source>Display entries corresponding to the process number.</source>
-          <note from="Developer" annotates="general" priority="2">DEU="Zugehörige Posten der Vorgangsnummer anzeigen."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Action lbt Navigate Process No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 1637726034 - Method 2239230202 - NamedType 1068754970" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
-          <source>Search</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Method FindProcess - NamedType Text002Msg</note>
         </trans-unit>
         <trans-unit id="TableExtension 1760497390 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3106816853">
           <source>Process No.</source>

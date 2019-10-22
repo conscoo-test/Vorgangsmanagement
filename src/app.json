@@ -31,7 +31,7 @@
     "from": 5266500,
     "to": 5266549
   },
-  "runtime": "3.2",
+  "runtime": "4.0",
   "showMyCode": true,
   "features": ["TranslationFile"]
 }
