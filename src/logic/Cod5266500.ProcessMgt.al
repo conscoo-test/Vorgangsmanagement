@@ -239,7 +239,7 @@ codeunit 5266500 "lbt Process Mgt."
         recref.open(TempDocumentEntry."Table ID");
         fref := recref.Field(5266500);
         fref.setfilter(TempDocumentEntry."lbt Process No.");
-        if TempDocumentEntry."Table ID" in [database::"Sales Header", database::"Purchase Header"] then begin
+        if TempDocumentEntry."Table ID" in [database::"Sales Header", database::"Purchase Header", Database::"Sales Header Archive", Database::"Purchase Header Archive"] then begin
             fref := recref.field(1);
             fref.setrange(TempDocumentEntry."Document Type");
             recref.findfirst();

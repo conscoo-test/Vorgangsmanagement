@@ -109,7 +109,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
                     SalesHdrArchiv2."Document Type" := SalesHdrArchiv2."Document Type"::"Blanket Order";
             end;
             SalesHdrArchiv.setrange("Document Type", SalesHdrArchiv2."Document Type");
-            InsertIntoDocEntry(rec, database::"Purchase Header", SalesHdrArchiv2."Document Type", format(SalesHdrArchiv2."Document Type"), SalesHdrArchiv.count());
+            InsertIntoDocEntry(rec, database::"Sales Header Archive", SalesHdrArchiv2."Document Type", format(SalesHdrArchiv2."Document Type"), SalesHdrArchiv.count());
         end;
 
     end;
@@ -141,7 +141,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
                     PurchHdrArchiv2."Document Type" := PurchHdrArchiv2."Document Type"::"Blanket Order";
             end;
             PurchHdrArchiv.setrange("Document Type", PurchHdrArchiv2."Document Type");
-            InsertIntoDocEntry(rec, database::"Purchase Header", PurchHdrArchiv2."Document Type", format(PurchHdrArchiv2."Document Type"), PurchHdrArchiv.count());
+            InsertIntoDocEntry(rec, database::"Purchase Header Archive", PurchHdrArchiv2."Document Type", format(PurchHdrArchiv2."Document Type"), PurchHdrArchiv.count());
 
         end;
 
