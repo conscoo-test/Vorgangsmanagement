@@ -2,8 +2,8 @@
   "id": "d33e833c-6dd5-4392-a5ce-502d6d7f9315",
   "name": "LIS365 Vorgangsmanagement",
   "publisher": "LeBit Software & Consult GmbH",
-  "brief": "",
-  "description": "",
+  "brief": "Documents are to be recorded in a list of processes and documented using an automatic or manually assigned number series",
+  "description": "Using the enhancement LIS365 Process Management, all processes in documents are to be recorded in a list of processes and documented using an automatic or manually assigned number series",
   "version": "1.0.0.0",
   "privacyStatement": "https://www.lebit.net/impressum#datenschutz",
   "EULA": "https://www.lebit.net/impressum#datenschutz",
@@ -31,7 +31,7 @@
     "from": 5266500,
     "to": 5266549
   },
-  "runtime": "3.2",
+  "runtime": "4.0",
   "showMyCode": true,
   "features": ["TranslationFile"]
 }

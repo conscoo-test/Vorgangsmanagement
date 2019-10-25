@@ -3,7 +3,7 @@ page 5266501 "lbt Process List"
 
     PageType = List;
     SourceTable = "lbt Process";
-    Caption = 'Process';
+    Caption = 'Process', Comment = 'DEU="Prozess"';
     ApplicationArea = All;
     UsageCategory = Lists;
 
