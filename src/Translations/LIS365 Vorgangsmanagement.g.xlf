@@ -158,6 +158,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Method FindProcess - NamedType Text002Msg</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - NamedType 2449707032" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Archived %1</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Archivierte(r) %1"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - NamedType ArchivedLbl</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1437034864 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
           <source>The process number is stored in this field.</source>
           <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>

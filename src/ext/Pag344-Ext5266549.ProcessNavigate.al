@@ -86,7 +86,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
     var
         SalesHdrArchiv: Record "Sales Header Archive";
         SalesHdrArchiv2: Record "Sales Header Archive";
-
+        DocTableName: Text;
         i: integer;
     begin
         if not SalesHdrArchiv.ReadPermission() then
@@ -109,7 +109,8 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
                     SalesHdrArchiv2."Document Type" := SalesHdrArchiv2."Document Type"::"Blanket Order";
             end;
             SalesHdrArchiv.setrange("Document Type", SalesHdrArchiv2."Document Type");
-            InsertIntoDocEntry(rec, database::"Purchase Header", SalesHdrArchiv2."Document Type", format(SalesHdrArchiv2."Document Type"), SalesHdrArchiv.count());
+            DocTableName := StrSubstNo(ArchivedLbl, SalesHdrArchiv2."Document Type");
+            InsertIntoDocEntry(rec, database::"Sales Header Archive", SalesHdrArchiv2."Document Type", DocTableName, SalesHdrArchiv.count());
         end;
 
     end;
@@ -118,6 +119,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
     var
         PurchHdrArchiv: Record "Purchase Header Archive";
         PurchHdrArchiv2: Record "Purchase Header Archive";
+        DocTableName: Text;
 
         i: integer;
     begin
@@ -140,8 +142,9 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
                 6:
                     PurchHdrArchiv2."Document Type" := PurchHdrArchiv2."Document Type"::"Blanket Order";
             end;
+            DocTableName := StrSubstNo(ArchivedLbl, PurchHdrArchiv2."Document Type");
             PurchHdrArchiv.setrange("Document Type", PurchHdrArchiv2."Document Type");
-            InsertIntoDocEntry(rec, database::"Purchase Header", PurchHdrArchiv2."Document Type", format(PurchHdrArchiv2."Document Type"), PurchHdrArchiv.count());
+            InsertIntoDocEntry(rec, database::"Purchase Header Archive", PurchHdrArchiv2."Document Type", DocTableName, PurchHdrArchiv.count());
 
         end;
 
@@ -298,7 +301,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             ReturnShptHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"return shipment Header", 0, ReturnShptHdr.TableCaption(), SalesShptHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"return shipment Header", 0, ReturnShptHdr.TableCaption(), ReturnShptHdr.COUNT());
         END;
     end;
 
@@ -397,4 +400,6 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
 
     end;
 
+    var
+        ArchivedLbl: Label 'Archived %1', Comment = 'DEU="Archivierte(r) %1"';
 }
