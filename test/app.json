@@ -15,20 +15,20 @@
         {
             
             "appId": "d33e833c-6dd5-4392-a5ce-502d6d7f9315",
-            "name": "LIS365 Vorgangsmanagement",
+            "name": "LeBit Processmanagement",
             "publisher": "LeBit Software & Consult GmbH",
             "version": "1.0.0.0"
         }
     ],
     "screenshots": [],
-    "platform": "14.0.0.0",
-    "application": "14.0.0.0",
-    "test": "14.0.0.0",
+    "platform": "15.0.0.0",
+    "application": "15.0.0.0",
+    "test": "15.0.0.0",
     "idRange": {
       "from": 5266500,
       "to": 5266549
     },
-    "runtime": "3.2",
+    "runtime": "4.0",
     "showMyCode": true,
-    "target": "Internal"
+    "target": "Cloud"
   }
