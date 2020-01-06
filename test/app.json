@@ -9,7 +9,7 @@
     "EULA": "https://www.lebit.net/impressum#datenschutz",
     "help": "https://www.lebit.net/#support",
     "url": "https://www.lebit.net/#kontakt",
-    "logo": "..\\Appendix\\Logo\\LB18.jpg",
+    "logo": "",
     "capabilities": [],
     "dependencies": [
         {
