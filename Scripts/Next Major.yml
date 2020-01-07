@@ -6,7 +6,7 @@ resources:
       
 trigger: none
 schedules:
-- cron: '0 1 * * SUN'
+- cron: '0 1 * * SAT'
   displayName: Weekly Next Major build
   branches:
     include:
