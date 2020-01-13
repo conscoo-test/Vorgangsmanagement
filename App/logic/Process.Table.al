@@ -13,7 +13,7 @@ table 5266501 "lbt Process"
             DataClassification = CustomerContent;
 
         }
-        field(5; Description; text[80])
+        field(5; Description; text[100])
         {
             Caption = 'Description', comment = 'DEU="Beschreibung"';
             DataClassification = CustomerContent;
@@ -47,11 +47,11 @@ table 5266501 "lbt Process"
 
     procedure Navigate()
     var
-        Navigate: Page Navigate;
+        NavigatePage: Page Navigate;
     begin
-        Navigate.SetProcessNo("No.");
-        navigate.FindProcess();
-        navigate.run();
+        NavigatePage.SetProcessNo("No.");
+        navigatePage.FindProcess();
+        navigatePage.run();
     end;
 
     procedure newProcess(var ProcessNo: Code[20])

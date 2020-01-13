@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="LeBit Processmanagement">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 792820499 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table lbt Process - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 792820499 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Beschreibung"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table lbt Process - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 792820499 - Field 2897660500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Record ID</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Record ID"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table lbt Process - Field Record ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 792820499 - Method 2152733569 - NamedType 1881095303" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you really want to get a new process number and overwrite the old process number?</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Wollen Sie wirklich eine neue Vorgangsnummer ziehen und die alte Vorgangsnummer überschreiben?"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table lbt Process - Method newProcess - NamedType Text001Msg</note>
+        </trans-unit>
+        <trans-unit id="Table 3697177754 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Primärschlüssel"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table lbt Process Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3697177754 - Field 2314245113 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process Nos.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozess Nummernserie"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table lbt Process Setup - Field Process Nos. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3697177754 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process Setup</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Einrichtung Prozessmanagement"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page lbt Process Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3697177754 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Allgemein"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page lbt Process Setup - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3697177754 - Control 2314245113 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Here you select a process number series.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie eine Vorgangsnummernserie aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page lbt Process Setup - Control Process Nos. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3169895485 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozess"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page lbt Process List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3169895485 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This column is filled automatically or manually with the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Diese Spalte wird mit der Vorgangsnummer automatisch oder manuell befüllt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page lbt Process List - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3169895485 - Control 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Here is the description of the process.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier steht die Beschreibung des Vorgangs."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page lbt Process List - Control Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3169895485 - Action 3538210097 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The entries belonging to the transaction are counted.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Die zugehörigen Posten zu dem Vorgang werden gezählt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page lbt Process List - Action Navigate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3729292537 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2965669802">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process Blank Purch. Order - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2165175944 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1833997609">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process BlankSalesOrd.Arch - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4005434287 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2259427799">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process Blank Sales Order - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1396972703 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 461465832">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process BTPurch Order Arch - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 377540385 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1635918338">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process CreateInteraction - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1447176212 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2393537757">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process CustLedgEntries - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 966014936 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process GenJournal - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3162466687 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1887905131">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process GenLedgEntries - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4166055191 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3940806096">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process ItemJournal - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1437034864 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process ItemLedgEntries - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4181078641 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1703860994">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process JobJournal - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1612871706 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2097003905">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process JobPlanningLines - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Control 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Control lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Action 1021501795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Navigate Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Navigate Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Action lbt Navigate Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Action 1021501795 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Display entries corresponding to the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Zugehörige Posten der Vorgangsnummer anzeigen."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Action lbt Navigate Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - Method 2239230202 - NamedType 1068754970" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Search</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - Method FindProcess - NamedType Text002Msg</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1637726034 - NamedType 2449707032" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3538210097">
+          <source>Archived %1</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Archivierte(r) %1"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt ProcessNavigate - NamedType ArchivedLbl</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3584785572 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2854365759">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostedPurchCRM - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1648932367 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4048657685">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostedPurchInvoice - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2988302100 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2344297010">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostedPurchreceipt - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2691352417 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 52957233">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostedReturnRcpt - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1279247052 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1514853781">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostedReturnShip - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3637129136 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2716593954">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostedSalesCRM - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1128142115 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostedSalesInvoice - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2638371731 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3373253667">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PostSalesShipment - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2306528983 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4042331808">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PurchaseCreditmemo - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2386360468 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2437096118">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PurchaseInvoices - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1030692064 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 387971303">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PurchaseOrder - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1997759764 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3321822267">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PurchaseQuote - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3889643669 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4198988281">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process Purch. Order Arch. - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2721249473 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 294608717">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process Purch. Quote Arch. - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2049940627 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1555938241">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process PurchReturnOrder - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1783764720 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1367327215">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process Purch.RTOrd Arch - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2002211870 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2075928125">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process ResourceJournal - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2641182623 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1708100201">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process SalesCRM - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2696126580 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4034894651">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process SalesInvoice - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3940658921 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process SalesOrder - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2997971179 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2079885696">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process Sales Order Arch. - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2366502749 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 280137910">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process SalesQuote - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1534214263 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 327261204">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process Sales Quote Arch. - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 870019903 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1598289728">
+          <source>Here you select the process number.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Hier wählen Sie die Vorgangsnummer aus."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process SalesReturnOrder - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4200915228 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 388992258">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process SalesRTOrd Arch. - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2460391244 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2248515987">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process VAT Entries - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3164402684 - Control 2219059994 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1567633909">
+          <source>The process number is stored in this field.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="In diesem Feld ist die Vorgangsnummer hinterlegt."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension lbt Process VendLedgEntries - Control lbt Process No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4008288457 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2733917450">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Cust. Ledger Entry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3276169550 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2007144088">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process CVLedgEntryBuffer - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3612598837 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 235946633">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process DetCustLedgEntry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2222868122 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1013257135">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process DetCVLedgEntryBuf - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3311334941 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1910049904">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process DetVendLedgEntry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1760497390 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3106816853">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt ProcessDocumentEntry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1063705039 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1874461389">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process EmployeeLedgEntry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3934373104 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1806786327">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Gen. Journal Line - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2187606731 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2825951060">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process G/L Entry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2970192349 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2182196518">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process InteractLogEntry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1314669156 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2247222673">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process InvoicePostBuffer - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3371232461 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 346005766">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Item Journal Line - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1458888647 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4089294192">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Item Ledger Entry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2872442284 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 938095748">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process JobJnlLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 953459609 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 53801266">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process JobLedgerEntry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3807438223 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1537641792">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process JobPlanningLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2108484415 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Purchase Header - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 482582360 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Purchase Line - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1951807506 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process PurchCRMHeader - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 359659705 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 518488723">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process PurchCRMLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2551736728 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 146271610">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Purch Header Arch. - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 202389621 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process PurchInvHeader - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2675253454 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2575310733">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process PurchInvLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3227659711 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2809873457">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Purch Line Arch. - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4177153697 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process PurchRcptHeader - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2987581274 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process PurchRcptLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2132924286 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1308990239">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process ResJournalLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4014382373 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2850645989">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process ResLedgEntry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2185132451 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2925931323">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process RetReceiptHeader - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 726243324 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1173465396">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process RetReceiptLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1189893543 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1721347679">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process RetShipmentHeader - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4062943040 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4118213496">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process RetShipmentLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3883235974 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process SalesCRMHeader - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1846017485 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process SalesCRMLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 776300490 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Sales Header - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 780557836 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1948788855">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Sales Header Arch. - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2522021153 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process SalesInvHeader - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 493200858 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2079186865">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process SalesInvLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3177828433 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Sales Line - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2077872467 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2903552224">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process Sales Line Arch. - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 167715479 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3118382297">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process SalesShpHeader - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1753760080 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1114148978">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process SalesShpLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1064176434 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2941967353">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt Process VAT Entry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 840350552 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 406314583">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt ProcessVendorLedgerEntry - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3431566929 - Field 2219059994 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 341757143">
+          <source>Process No.</source>
+          <note from="Developer" annotates="general" priority="2">DEU="Prozessnr."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension lbt SegmentLine - Field lbt Process No. - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

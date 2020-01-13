@@ -86,7 +86,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
     var
         SalesHdrArchiv: Record "Sales Header Archive";
         SalesHdrArchiv2: Record "Sales Header Archive";
-        DocTableName: Text;
+        DocTableName: Text[1024];
         i: integer;
     begin
         if not SalesHdrArchiv.ReadPermission() then
@@ -119,7 +119,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
     var
         PurchHdrArchiv: Record "Purchase Header Archive";
         PurchHdrArchiv2: Record "Purchase Header Archive";
-        DocTableName: Text;
+        DocTableName: Text[1024];
 
         i: integer;
     begin
@@ -188,9 +188,6 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
         PurchInvHdr: Record "Purch. Inv. Header";
         PurchRcptHdr: Record "Purch. Rcpt. Header";
         PurchCrMemoHdr: Record "Purch. Cr. Memo Hdr.";
-        PurchInvLn: Record "Purch. Inv. line";
-        PurchRcptLn: Record "Purch. Rcpt. line";
-        PurchCrMemoLn: Record "Purch. Cr. Memo line";
         ReturnRcptHdr: Record "Return Receipt Header";
     begin
         IF PurchInvHdr.READPERMISSION() THEN BEGIN
@@ -199,7 +196,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             PurchInvHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchInvHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"Purch. Inv. Header", 0, PurchInvHdr.TableCaption(), PurchInvHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"Purch. Inv. Header", 0, CopyStr(PurchInvHdr.TableCaption(), 1, 1024), PurchInvHdr.COUNT());
         END;
 
         IF PurchCrMemoHdr.READPERMISSION() THEN BEGIN
@@ -208,7 +205,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             PurchCrMemoHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"Purch. Cr. Memo Hdr.", 0, PurchCrMemoHdr.TableCaption(), PurchCrMemoHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"Purch. Cr. Memo Hdr.", 0, CopyStr(PurchCrMemoHdr.TableCaption(), 1, 1024), PurchCrMemoHdr.COUNT());
         END;
         IF PurchRcptHdr.READPERMISSION() THEN BEGIN
             PurchRcptHdr.RESET();
@@ -216,7 +213,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             PurchRcptHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"Purch. Rcpt. Header", 0, PurchrcptHdr.TableCaption(), PurchrcptHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"Purch. Rcpt. Header", 0, CopyStr(PurchrcptHdr.TableCaption(), 1, 1024), PurchrcptHdr.COUNT());
         END;
         IF ReturnRcptHdr.READPERMISSION() THEN BEGIN
             ReturnRcptHdr.RESET();
@@ -224,7 +221,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             ReturnRcptHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"return Receipt Header", 0, ReturnRcptHdr.TableCaption(), PurchrcptHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"return Receipt Header", 0, CopyStr(ReturnRcptHdr.TableCaption(), 1, 1024), PurchrcptHdr.COUNT());
         END;
     end;
 
@@ -276,7 +273,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             SalesInvHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchInvHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"Sales Invoice Header", 0, salesInvHdr.TableCaption(), salesInvHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"Sales Invoice Header", 0, CopyStr(SalesInvHdr.TableCaption(), 1, 1024), SalesInvHdr.COUNT());
         END;
 
         IF SalesCrMemoHdr.READPERMISSION() THEN BEGIN
@@ -285,7 +282,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             SalesCrMemoHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"Sales Cr.Memo Header", 0, SalesCrMemoHdr.TableCaption(), salesCrMemoHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"Sales Cr.Memo Header", 0, CopyStr(SalesCrMemoHdr.TableCaption(), 1, 1024), SalesCrMemoHdr.COUNT());
         END;
         IF SalesShptHdr.READPERMISSION() THEN BEGIN
             SalesShptHdr.RESET();
@@ -293,7 +290,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             SalesShptHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"sales shipment Header", 0, SalesShptHdr.TableCaption(), SalesShptHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"sales shipment Header", 0, CopyStr(SalesShptHdr.TableCaption(), 1, 1024), SalesShptHdr.COUNT());
         END;
         IF ReturnShptHdr.READPERMISSION() THEN BEGIN
             ReturnShptHdr.RESET();
@@ -301,7 +298,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             ReturnShptHdr.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //    PurchCrMemoHeader.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"return shipment Header", 0, ReturnShptHdr.TableCaption(), ReturnShptHdr.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"return shipment Header", 0, CopyStr(ReturnShptHdr.TableCaption(), 1, 1024), ReturnShptHdr.COUNT());
         END;
     end;
 
@@ -324,7 +321,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             GLEntry.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //GLEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"G/L Entry", 0, GLEntry.TABLECAPTION(), GLEntry.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"G/L Entry", 0, CopyStr(GLEntry.TABLECAPTION(), 1, 1024), GLEntry.COUNT());
         END;
 
         IF VendLedgEntry.READPERMISSION() THEN BEGIN
@@ -333,7 +330,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             VendLedgEntry.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //VendLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"Vendor Ledger Entry", 0, VendLedgEntry.TABLECAPTION(), VendLedgEntry.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"Vendor Ledger Entry", 0, CopyStr(VendLedgEntry.TABLECAPTION(), 1, 1024), VendLedgEntry.COUNT());
         END;
 
         IF CustLedgEntry.READPERMISSION() THEN BEGIN
@@ -342,7 +339,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             CustLedgEntry.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"Cust. Ledger Entry", 0, CustLedgEntry.TABLECAPTION(), CustLedgEntry.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"Cust. Ledger Entry", 0, CopyStr(CustLedgEntry.TABLECAPTION(), 1, 1024), CustLedgEntry.COUNT());
         END;
         IF employeeLedgEntry.READPERMISSION() THEN BEGIN
             employeeLedgEntry.RESET();
@@ -350,7 +347,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             employeeLedgEntry.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"employee Ledger Entry", 0, employeeLedgEntry.TABLECAPTION(), employeeLedgEntry.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"employee Ledger Entry", 0, CopyStr(employeeLedgEntry.TABLECAPTION(), 1, 1024), employeeLedgEntry.COUNT());
         END;
         IF itemLedgEntry.READPERMISSION() THEN BEGIN
             itemLedgEntry.RESET();
@@ -358,7 +355,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             itemLedgEntry.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"item Ledger Entry", 0, itemLedgEntry.TABLECAPTION(), itemLedgEntry.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"item Ledger Entry", 0, CopyStr(itemLedgEntry.TABLECAPTION(), 1, 1024), itemLedgEntry.COUNT());
         END;
         IF jobLedgEntry.READPERMISSION() THEN BEGIN
             jobLedgEntry.RESET();
@@ -366,7 +363,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             jobLedgEntry.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"job Ledger Entry", 0, jobLedgEntry.TABLECAPTION(), jobLedgEntry.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"job Ledger Entry", 0, CopyStr(jobLedgEntry.TABLECAPTION(), 1, 1024), jobLedgEntry.COUNT());
         END;
         IF resLedgEntry.READPERMISSION() THEN BEGIN
             resLedgEntry.RESET();
@@ -374,7 +371,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             resLedgEntry.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"res. Ledger Entry", 0, resLedgEntry.TABLECAPTION(), resLedgEntry.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"res. Ledger Entry", 0, CopyStr(resLedgEntry.TABLECAPTION(), 1, 1024), resLedgEntry.COUNT());
         END;
         IF InteractLogEntry.READPERMISSION() THEN BEGIN
             InteractLogEntry.RESET();
@@ -382,7 +379,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             InteractLogEntry.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"Interaction Log Entry", 0, InteractLogEntry.TABLECAPTION(), InteractLogEntry.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"Interaction Log Entry", 0, CopyStr(InteractLogEntry.TABLECAPTION(), 1, 1024), InteractLogEntry.COUNT());
         END;
         IF VATEntry.READPERMISSION() THEN BEGIN
             VATEntry.RESET();
@@ -390,7 +387,7 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             VATEntry.SETFILTER("lbt Process No.", ProcessNo);
             //IF PostingDateFilter <> '' THEN
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
-            InsertIntoDocEntry(Rec, DATABASE::"VAT Entry", 0, VATEntry.TABLECAPTION(), VATEntry.COUNT());
+            InsertIntoDocEntry(Rec, DATABASE::"VAT Entry", 0, CopyStr(VATEntry.TABLECAPTION(), 1, 1024), VATEntry.COUNT());
         END;
     end;
 
