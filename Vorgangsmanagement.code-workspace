@@ -1,11 +1,30 @@
 {
 	"folders": [
-		{
-			"path": "App"
-		},
-		{
-			"path": "test"
-		}
+		 {
+			  "path": "App"
+		 },
+		 {
+			  "path": "Test"
+		 },
+		 {
+			  "path": "Scripts"
+		 },
+		 {
+			  "path": "Dependencies"
+		 }
 	],
-	"settings": {}
+	"settings": {
+		 "al.enableCodeAnalysis": true,
+		 "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+		 "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+		 "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+		 "CRS.RemovePrefixFromFilename": true,
+		 "CRS.ObjectNamePrefix": "lbt ",
+		 "CRS.OnSaveAlFileAction": "Rename",
+		 "al.codeAnalyzers": [
+			  "${AppSourceCop}",
+			  "${CodeCop}",
+			  "${UICop}"
+		 ],
+	}
 }

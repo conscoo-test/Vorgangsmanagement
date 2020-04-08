@@ -1,2 +1,10 @@
+*/.alpackages/*
+*/.alcache/
+*/.altemplates
 *.app
-.vscode
+app/*.app
+test/*.app
+*/.vscode/*
+app/permissionsAnalyzer.json
+rad.json
+*.flf
