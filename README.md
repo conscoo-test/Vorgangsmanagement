@@ -31,5 +31,5 @@ z.b. [Microsoft AL Dokumentation](https://docs.microsoft.com/en-us/dynamics365/b
 Für Auflistung der H-Nummern/Entwicklungsaufgaben an diesen Repo
 z.B:
  - [H16/0382](dynamicsnav://lvserver14:9002/LeBit2016_Live/LeBit%20Software%20%26%20Consult%20GmbH/runpage?page=90006&personalization=90006&bookmark=27%3Bll8BAAJ7%2F0gAMQA2AC8AMAAzADgAMg%3D%3D&mode=Edit)
-
+ - [H16/0382](dynamicsnav://lvserver14:9002/LeBit2016_Live/LeBit%20Software%20%26%20Consult%20GmbH/runpage?page=90006&personalization=90006&bookmark=27%3Bll8BAAJ7%2F0gAMQA2AC8AMAAzADgAMg%3D%3D&mode=Edit)
  
