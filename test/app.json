@@ -10,7 +10,6 @@
     "help": "https://www.lebit.net/#support",
     "url": "https://www.lebit.net/#kontakt",
     "logo": "",
-    "capabilities": [],
     "dependencies": [
         {
             
@@ -24,10 +23,13 @@
     "platform": "15.0.0.0",
     "application": "15.0.0.0",
     "test": "15.0.0.0",
-    "idRange": {
+    "idRanges": [ 
+      {
       "from": 5266500,
       "to": 5266549
-    },
+      }
+    ],
+
     "runtime": "4.0",
     "showMyCode": true,
     "target": "Cloud"
