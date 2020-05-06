@@ -10,7 +10,7 @@ variables:
 - group: secrets
       
 stages:
-- stage: BuildMinorRelease
+- stage: Build
   jobs:
   - job: Build
     variables:
@@ -29,8 +29,7 @@ stages:
     steps:
     - template: build-steps.yml@templates
 
-
-    - stage: Release
+- stage: Release
   dependsOn: Build
   jobs:
     - deployment: "Release_D"
