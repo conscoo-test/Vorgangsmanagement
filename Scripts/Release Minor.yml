@@ -18,8 +18,9 @@ stages:
       platform: x64
       version: "current"
       appVersion: "1"
-      appBuild: $[counter(variables['appVersion'],1)]
-      appRevision: "0.0"
+      appMinor: $[counter(variables['appVersion'],1)] 
+      appBuild: 0
+      appRevision: 0
       createRuntimePackages: False
       skipComponentGovernanceDetection: True
 
