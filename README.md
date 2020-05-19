@@ -13,7 +13,7 @@ Folgende Build Pipeline wurden eingerichtet:
 - Next Major https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=64&_a=summary
 - Next Minor https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=65&_a=summary
 
-Eine Release-Pipeline ist bisher noch nicht vorhanden!
+Folgende Release Pipeline wurde eingerichtet:
 
 # Latest Release
 1.9.0.0
