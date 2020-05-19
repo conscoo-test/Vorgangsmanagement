@@ -16,7 +16,7 @@ Folgende Build Pipeline wurden eingerichtet:
 Eine Release-Pipeline ist bisher noch nicht vorhanden!
 
 # Latest Release
-Muss noch gefüllt werden!
+1.9.0.0
 
 # TestApp
 Also Dummy vorhanden, noch keine Testroutine entworfen und umgesetzt
