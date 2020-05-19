@@ -13,10 +13,11 @@ Folgende Build Pipeline wurden eingerichtet:
 - Next Major https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=64&_a=summary
 - Next Minor https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=65&_a=summary
 
-Eine Release-Pipeline ist bisher noch nicht vorhanden!
+Folgende Release Pipeline wurde eingerichtet:
+- Minor Release https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=123&_a=summary
 
 # Latest Release
-Muss noch gefüllt werden!
+1.9.0.0
 
 # TestApp
 Also Dummy vorhanden, noch keine Testroutine entworfen und umgesetzt
