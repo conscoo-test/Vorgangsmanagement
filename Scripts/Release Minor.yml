@@ -30,18 +30,4 @@ stages:
     steps:
     - template: build-steps.yml@templates
 
-- stage: Release
-  dependsOn: Build
-  jobs:
-    - deployment: "Release_D"
-      variables:
-        version: "cronus_de"
-      pool:
-        name: Default
-      environment: environment_1
-      strategy:
-        runOnce:
-          deploy:
-            steps:
-            - template: release-steps.yml@templates
 
