@@ -10,6 +10,9 @@ Ansonsten keine weiteren Abhängigkeiten!
 # Build und Release
 Folgende Build Pipeline wurden eingerichtet:
 - Continuous Integration https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=63&_a=summary
+[![Build Status](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_apis/build/status/LeBit365_Vorgangsmanagement/LeBit365_Vorgangsmanagement%20-%20CI?branchName=master)](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build/latest?definitionId=63&branchName=master)
+
+
 - Next Major https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=64&_a=summary
 - Next Minor https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=65&_a=summary
 
