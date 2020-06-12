@@ -5,7 +5,7 @@ Diese sogenannte Vorgangsnummer kann automatisch über eine Nummernserie oder ma
 
 # Abhängigkeiten
 Die Extension besitzt Abhängigkeiten zur Microsoft Basis Application von Business Central. <br>
-Ansonsten keine weiteren Abhängigkeiten!
+Ansonsten keine weiteren Abhängigkeiten!!!!!!
 
 # Build und Release
 Folgende Build Pipeline wurden eingerichtet:
@@ -20,10 +20,10 @@ Folgende Release Pipeline wurde eingerichtet:
 - Minor Release https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=123&_a=summary
 
 # Latest Release
-1.9.0.0
+1.9.0.2
 
 # TestApp
-Also Dummy vorhanden, noch keine Testroutine entworfen und umgesetzt
+Also Dummy vorhanden, noch keine Testroutine entworfen und umgesetzt!!!!!
 
 # weitere Dokumentationen
 
@@ -36,5 +36,9 @@ Für Auflistung der H-Nummern/Entwicklungsaufgaben an diesen Repo
 z.B:
  - [H16/0382](dynamicsnav://lvserver14:9002/LeBit2016_Live/LeBit%20Software%20%26%20Consult%20GmbH/runpage?page=90006&personalization=90006&bookmark=27%3Bll8BAAJ7%2F0gAMQA2AC8AMAAzADgAMg%3D%3D&mode=Edit)
  - [H16/0382](dynamicsnav://lvserver14:9002/LeBit2016_Live/LeBit%20Software%20%26%20Consult%20GmbH/runpage?page=90006&personalization=90006&bookmark=27%3Bll8BAAJ7%2F0gAMQA2AC8AMAAzADgAMg%3D%3D&mode=Edit)
- - noch eine Hnummer
+ - noch eine Hnummernoch eine Hnummer
+ noch eine Hnummer
+ noch eine Hnummer
+
+ noch eine Hnummer
 
