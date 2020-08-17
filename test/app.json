@@ -12,6 +12,25 @@
     "logo": "",
     "dependencies": [
         {
+              
+      "appId": "dd0be2ea-f733-4d65-bb34-a28f4624fb14",
+      "publisher": "Microsoft",
+      "name": "Library Assert",
+      "version": "16.0.0.0"
+    },
+    {
+      "appId": "e7320ebb-08b3-4406-b1ec-b4927d3e280b",
+      "publisher": "Microsoft",
+      "name": "Any",
+      "version": "16.0.0.0"
+    },
+    {
+    "appId":  "23de40a6-dfe8-4f80-80db-d70f83ce8caf",
+    "publisher":  "Microsoft",
+    "name":  "Test Runner",
+    "version":  "16.0.0.0"
+    },
+    {
             
             "appId": "d33e833c-6dd5-4392-a5ce-502d6d7f9315",
             "name": "LeBit Processmanagement",
@@ -22,8 +41,7 @@
     "screenshots": [],
     "platform": "15.0.0.0",
     "application": "15.0.0.0",
-    "test": "15.0.0.0",
-    "idRanges": [ 
+       "idRanges": [ 
       {
       "from": 5266500,
       "to": 5266549
