@@ -8,16 +8,17 @@ Die Extension besitzt Abhängigkeiten zur Microsoft Basis Application von Busine
 Ansonsten keine weiteren Abhängigkeiten!!!!!!
 
 # Build und Release
-Folgende Build Pipeline wurden eingerichtet:
-- Continuous Integration https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=63&_a=summary
-[![Build Status](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_apis/build/status/LeBit365_Vorgangsmanagement/LeBit365_Vorgangsmanagement%20-%20CI?branchName=master)](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build/latest?definitionId=63&branchName=master)
+- **Continuous Integration** 
+  [![Build Status](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_apis/build/status/LeBit365_Vorgangsmanagement/LeBit365_Vorgangsmanagement%20-%20CI?repoName=LeBit365_Vorgangsmanagement&branchName=refs%2Fpull%2F710%2Fmerge)](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build/latest?definitionId=63&repoName=LeBit365_Vorgangsmanagement&branchName=refs%2Fpull%2F710%2Fmerge)
 
+- **Next Minor**
+   [![Build Status](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_apis/build/status/LeBit365_Vorgangsmanagement/LeBit365_Vorgangsmanagement%20-%20NextMinor?repoName=LeBit365_Vorgangsmanagement&branchName=master)](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build/latest?definitionId=65&repoName=LeBit365_Vorgangsmanagement&branchName=master)
 
-- Next Major https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=64&_a=summary
-- Next Minor https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=65&_a=summary
+- **Next Major**
+   [![Build Status](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_apis/build/status/LeBit365_Vorgangsmanagement/LeBit365_Vorgangsmanagement%20-%20NextMajor?repoName=LeBit365_Vorgangsmanagement&branchName=master)](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build/latest?definitionId=64&repoName=LeBit365_Vorgangsmanagement&branchName=master)
 
-Folgende Release Pipeline wurde eingerichtet:
-- Minor Release https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build?definitionId=123&_a=summary
+- **Minor Release** 
+[![Build Status](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_apis/build/status/LeBit365_Vorgangsmanagement/LeBit365_Vorgangsmanagement%20-%20MinorRelease?repoName=LeBit365_Vorgangsmanagement&branchName=refs%2Fpull%2F565%2Fmerge)](https://dev.azure.com/DEVLB/Produktplanung%20LIS/_build/latest?definitionId=123&repoName=LeBit365_Vorgangsmanagement&branchName=refs%2Fpull%2F565%2Fmerge)
 
 # Latest Release
 1.9.0.2
@@ -32,13 +33,5 @@ z.b. [Microsoft AL Dokumentation](https://docs.microsoft.com/en-us/dynamics365/b
 
 # Dokumentationstrigger
 
-Für Auflistung der H-Nummern/Entwicklungsaufgaben an diesen Repo
-z.B:
- - [H16/0382](dynamicsnav://lvserver14:9002/LeBit2016_Live/LeBit%20Software%20%26%20Consult%20GmbH/runpage?page=90006&personalization=90006&bookmark=27%3Bll8BAAJ7%2F0gAMQA2AC8AMAAzADgAMg%3D%3D&mode=Edit)
- - [H16/0382](dynamicsnav://lvserver14:9002/LeBit2016_Live/LeBit%20Software%20%26%20Consult%20GmbH/runpage?page=90006&personalization=90006&bookmark=27%3Bll8BAAJ7%2F0gAMQA2AC8AMAAzADgAMg%3D%3D&mode=Edit)
- - noch eine Hnummernoch eine Hnummer
- noch eine Hnummer
- noch eine Hnummer
-
- noch eine Hnummer
+n/v
 
