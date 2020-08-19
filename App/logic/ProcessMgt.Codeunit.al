@@ -1,8 +1,30 @@
 codeunit 5266500 "lbt Process Mgt."
 {
-    trigger OnRun()
+    procedure CreateProcess(RecordVariant: Variant; Description: Text[100]) ProcessNo: Code[20]
+    var
+        ProcessSetup: Record "lbt Process Setup";
+        Process: Record "lbt Process";
+        RecRef: RecordRef;
     begin
+        ProcessSetup.Get();
+        ProcessSetup.TestField("Process Nos.");
 
+        if not RecordVariant.IsRecord then
+            exit;
+
+        RecRef.GetTable(RecordVariant);
+        Process.Init();
+        Process."No." := '';
+        Process."Record ID" := RecRef.RecordId;
+        Process.Description := Description;
+        Process.Insert(true);
+
+        exit(Process."No.");
+    end;
+
+    procedure CreateProcess(RecordVariant: Variant) ProcessNo: Code[20]
+    begin
+        exit(CreateProcess(RecordVariant, ''));
     end;
 
     procedure CreateSalesProcess(var SalesHdr: Record "Sales Header")
