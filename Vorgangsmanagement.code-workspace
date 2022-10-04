@@ -22,7 +22,7 @@
 		 "CRS.ObjectNamePrefix": "lbt ",
 		 "CRS.OnSaveAlFileAction": "Rename",
 		 "al.codeAnalyzers": [
-			  "${AppSourceCop}",
+			//   "${AppSourceCop}",
 			  "${CodeCop}",
 			  "${UICop}"
 		 ],

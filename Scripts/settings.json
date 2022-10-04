@@ -1,5 +1,5 @@
 {
-    "name": "LeBit365 Vorgangsmanagement",
+    "name": "Vorgangsmanagement",
     "appFolders": "app",
     "testFolders": "",
     "installTestRunner": false,
@@ -10,16 +10,15 @@
     "versions": [
         {
             "version": "current",
-            "artifact": "///us/Current",
-            "CreateRuntimePackages": true
-        },
-        {
-            "version": "nextmajor",
-            "artifact": "///us/NextMajor/{INSIDERSASTOKEN}"
+            "artifact": "///de/Current"
         },
         {
             "version": "nextminor",
-            "artifact": "///us/NextMinor/{INSIDERSASTOKEN}"
+            "artifact": "///de/NextMinor/{INSIDERSASTOKEN}"
+        },
+        {
+            "version": "nextmajor",
+            "artifact": "///de/NextMajor/{INSIDERSASTOKEN}"
         }
     ]
 }
