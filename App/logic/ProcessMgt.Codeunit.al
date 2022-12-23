@@ -259,6 +259,8 @@ codeunit 5266500 "lbt Process Mgt."
             exit;
 
         recref.open(TempDocumentEntry."Table ID");
+        if not RecRef.FieldExist(5266500) then
+            exit;
         fref := recref.Field(5266500);
         fref.setfilter(TempDocumentEntry."lbt Process No.");
         if TempDocumentEntry."Table ID" in [database::"Sales Header", database::"Purchase Header", Database::"Sales Header Archive", Database::"Purchase Header Archive"] then begin
