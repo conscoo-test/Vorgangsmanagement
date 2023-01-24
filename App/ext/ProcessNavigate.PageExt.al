@@ -66,8 +66,8 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
         FindArchivSalesDocs();
         FindArchivPurchDocs();
         findEntries();
-        rec.ModifyAll("lbt Process No.", ProcessNo);
         onAfterInsertDocEntries(Rec, ProcessNo);
+        rec.ModifyAll("lbt Process No.", ProcessNo);
         //DocExists := FINDFIRST;
 
         //UpdateFormAfterFindRecords;
