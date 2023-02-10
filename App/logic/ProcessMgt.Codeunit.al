@@ -243,7 +243,6 @@ codeunit 5266500 "lbt Process Mgt."
     end;
 
 
-
     ///NAVIGATE: Show event
     [EventSubscriber(ObjectType::Page, Page::Navigate, 'OnBeforeNavigateShowRecords', '', True, True)]
     local procedure OnBeforeNavigateShowRecords(TableID: Integer; var TempDocumentEntry: Record "Document Entry"; var IsHandled: Boolean)
@@ -278,6 +277,12 @@ codeunit 5266500 "lbt Process Mgt."
 
         isHandled := true;
 
+    end;
+
+    [EventSubscriber(ObjectType::Page, Page::Navigate, 'OnAfterSetSource', '', false, false)]
+    local procedure OnAfterSetSource(var Sender: Page Navigate; var SourceType2: Integer; var SourceType: Text[30]; SourceNo: Code[20]; var SourceName: Text[100]);
+    begin
+        Sender.lbtOnAfterSetSource();
     end;
 
 }
