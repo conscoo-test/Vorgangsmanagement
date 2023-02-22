@@ -4,12 +4,31 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
     {
         addlast(Document)
         {
-            field("lbt Process No."; ProcessNo)
+            field("lbt Process No."; ProcessNoFilter)
             {
                 Caption = 'Process No.', comment = 'DEU="Prozessnr."';
                 ToolTip = 'Here you select the process number.', comment = 'DEU="Hier wählen Sie die Vorgangsnummer aus."';
                 TableRelation = "lbt process";
                 ApplicationArea = all;
+
+                trigger OnValidate()
+                begin
+                    ProcessNo := ProcessNoFilter;
+                    Rec.SetFilter("lbt Process No.", ProcessNoFilter);
+
+                    //ClearTrackingInfo()
+
+                    //ClearContactInfo()
+                    ContactType := ContactType::" ";
+                    ContactNo := '';
+                    if Rec."lbt Process No." <> '' then
+                        FindProcess();
+
+                    //ClearSourceInfo()
+
+                    //FilterSelectionChanged()
+
+                end;
             }
         }
         // Add changes to page layout here
@@ -29,6 +48,8 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
                 PromotedIsBig = true;
                 PromotedOnly = true;
                 PromotedCategory = Process;
+                Visible = false;
+
                 trigger OnAction()
                 begin
                     if ProcessNo <> '' then
@@ -41,8 +62,15 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
         // Add changes to page actions here
     }
 
-    var
+    trigger OnOpenPage()
+    begin
+        if ProcessNo <> '' then
+            FindProcess();
+    end;
+
+    protected var
         ProcessNo: code[50];
+        ProcessNoFilter: Text;
 
     procedure SetProcessNo(p_ProcessNo: Code[50])
     begin
@@ -389,6 +417,12 @@ pageextension 5266549 "lbt ProcessNavigate" extends "Navigate"//344
             //CustLedgEntry.SETFILTER("Posting Date",PostingDateFilter);
             InsertIntoDocEntry(Rec, DATABASE::"VAT Entry", 0, CopyStr(VATEntry.TABLECAPTION(), 1, 1024), VATEntry.COUNT());
         END;
+    end;
+
+    procedure lbtOnAfterSetSource()
+    begin
+        Rec.SetRange("lbt Process No.", ProcessNo);
+        ProcessNoFilter := Rec.GetFilter("lbt Process No.")
     end;
 
     [BusinessEvent(true)]
