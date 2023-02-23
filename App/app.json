@@ -32,8 +32,12 @@
       "to": 5266549
     }
   ],
-  "runtime": "4.0",
-  "showMyCode": true,
+  "runtime": "10.0",
+      "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "includeSourceInSymbolFile": true,
+        "applyToDevExtension": true
+    },
   "features": [
     "TranslationFile"
   ]
