@@ -2,6 +2,7 @@
     "name": "Vorgangsmanagement",
     "appFolders": "app",
     "testFolders": "",
+    "previousApps": "\\\\192.168.244.16\\Software_Business\\apps\\product\\Vorgangsmanagement\\latest.zip",
     "installTestRunner": false,
     "enableCodeCop": true,
     "enableAppSourceCop": false,
