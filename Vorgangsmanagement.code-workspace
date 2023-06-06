@@ -26,5 +26,6 @@
 			  "${CodeCop}",
 			  "${UICop}"
 		 ],
+		"al.ruleSetPath": "../scripts/lebit.ruleset.json",
 	}
 }

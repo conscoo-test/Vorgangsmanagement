@@ -8,6 +8,7 @@
     "enableAppSourceCop": false,
     "enablePerTenantExtensionCop": false,
     "enableUICop": true,
+    "rulesetFile": "scripts/lebit.ruleset.json",
     "versions": [
         {
             "version": "current",
