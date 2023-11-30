@@ -5,10 +5,11 @@
     "previousApps": "\\\\192.168.244.16\\Software_Business\\apps\\product\\Vorgangsmanagement\\latest.zip",
     "installTestRunner": false,
     "enableCodeCop": true,
-    "enableAppSourceCop": false,
+    "enableAppSourceCop": true,
     "enablePerTenantExtensionCop": false,
     "enableUICop": true,
     "rulesetFile": "scripts/lebit.ruleset.json",
+    "appSourceCopMandatoryAffixes": "lbt",
     "versions": [
         {
             "version": "current",

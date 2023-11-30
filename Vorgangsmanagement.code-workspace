@@ -22,10 +22,10 @@
 		 "CRS.ObjectNamePrefix": "lbt ",
 		 "CRS.OnSaveAlFileAction": "Rename",
 		 "al.codeAnalyzers": [
-			//   "${AppSourceCop}",
-			  "${CodeCop}",
-			  "${UICop}"
-		 ],
+			"${CodeCop}",
+			"${UICop}",
+			"${AppSourceCop}"
+		],
 		"al.ruleSetPath": "../scripts/lebit.ruleset.json",
 	}
 }
