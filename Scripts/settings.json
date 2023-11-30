@@ -9,6 +9,7 @@
     "enablePerTenantExtensionCop": false,
     "enableUICop": true,
     "rulesetFile": "scripts/lebit.ruleset.json",
+    "appSourceCopMandatoryAffixes": "lbt",
     "versions": [
         {
             "version": "current",
