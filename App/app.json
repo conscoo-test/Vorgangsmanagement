@@ -4,7 +4,7 @@
   "publisher": "LeBit Software & Consult GmbH",
   "brief": "Documents are to be recorded in a list of processes and documented using an automatic or manually assigned number series",
   "description": "Using the enhancement LeBit Processmanagement, all processes in documents are to be recorded in a list of processes and documented using an automatic or manually assigned number series",
-  "version": "1.4.0.0",
+  "version": "24.4.0.0",
   "privacyStatement": "https://www.lebit.net/impressum#datenschutz",
   "EULA": "https://www.lebit.net/impressum#datenschutz",
   "help": "https://www.lebit.net/#support",
@@ -12,7 +12,7 @@
   "contextSensitiveHelpUrl": "http://www.lebit.net",
   "logo": "Appendix\\Logo\\LB18.jpg",
   "platform": "1.0.0.0",
-  "application": "15.0.0.0",
+  "application": "24.0.0.0",
   "dependencies": [],
   "screenshots": [],
   "idRanges": [
@@ -21,7 +21,7 @@
       "to": 5266549
     }
   ],
-  "runtime": "10.0",
+  "runtime": "13.0",
   "resourceExposurePolicy": {
     "allowDebugging": true,
     "includeSourceInSymbolFile": true,
@@ -29,5 +29,6 @@
   },
   "features": [
     "TranslationFile"
-  ]
+  ],
+  "applicationInsightsConnectionString": "InstrumentationKey=18c42e7b-8d3d-426d-a667-15303864951d;IngestionEndpoint=https://germanywestcentral-0.in.applicationinsights.azure.com/;LiveEndpoint=https://germanywestcentral.livediagnostics.monitor.azure.com/"
 }
