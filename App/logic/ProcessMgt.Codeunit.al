@@ -170,10 +170,16 @@ codeunit 5266500 "lbt Process Mgt."
         ItemJournalLine."lbt Process No." := SalesLine."lbt Process No.";
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnAfterFillInvoicePostBuffer', '', true, true)]
-    local procedure extSalesFillInvBuffer(SalesLine: Record "Sales Line"; var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    // [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnAfterFillInvoicePostBuffer', '', true, true)]
+    // local procedure extSalesFillInvBuffer(SalesLine: Record "Sales Line"; var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    // begin
+    //     InvoicePostBuffer."lbt Process No." := SalesLine."lbt Process No.";
+    // end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales Post invoice events", 'OnPrepareLineOnAfterFillInvoicePostingBuffer', '', true, true)]
+    local procedure extSalesFillInvBuffer(SalesLine: Record "Sales Line"; var InvoicePostingBuffer: Record "Invoice Posting Buffer")
     begin
-        InvoicePostBuffer."lbt Process No." := SalesLine."lbt Process No.";
+        InvoicePostingBuffer."lbt Process No." := SalesLine."lbt Process No.";
     end;
 
     ///CU90
@@ -191,22 +197,41 @@ codeunit 5266500 "lbt Process Mgt."
         ItemJournalLine."lbt Process No." := PurchaseLine."lbt Process No.";
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", 'OnAfterFillInvoicePostBuffer', '', true, true)]
-    local procedure extPurchFillInvBuffer(PurchLine: Record "Purchase Line"; var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    // [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", 'OnAfterFillInvoicePostBuffer', '', true, true)]
+    // local procedure extPurchFillInvBuffer(PurchLine: Record "Purchase Line"; var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    // begin
+    //     InvoicePostBuffer."lbt Process No." := PurchLine."lbt Process No.";
+    // end;
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch. Post Invoice Events", 'OnPrepareLineOnAfterFillInvoicePostingBuffer', '', true, true)]
+    local procedure extPurchFillInvBuffer(PurchLine: Record "Purchase Line"; var InvoicePostingBuffer: Record "Invoice Posting Buffer")
     begin
-        InvoicePostBuffer."lbt Process No." := PurchLine."lbt Process No.";
-    end;
-    ///InvoicePostBuffer
-    [EventSubscriber(ObjectType::table, database::"Invoice Post. Buffer", 'OnAfterInvPostBufferPrepareSales', '', true, true)]
-    local procedure extSalesPrepareInvBuffer(var SalesLine: Record "Sales Line"; var InvoicePostBuffer: Record "Invoice Post. Buffer")
-    begin
-        InvoicePostBuffer."lbt Process No." := SalesLine."lbt Process No.";
+        InvoicePostingBuffer."lbt Process No." := PurchLine."lbt Process No.";
     end;
 
-    [EventSubscriber(ObjectType::table, database::"Invoice Post. Buffer", 'OnAfterInvPostBufferPreparePurchase', '', true, true)]
-    local procedure extPurchPrepareInvBuffer(var PurchaseLine: Record "Purchase Line"; var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    ///InvoicePostBuffer
+
+    // [EventSubscriber(ObjectType::table, database::"Invoice Post. Buffer", 'OnAfterInvPostBufferPrepareSales', '', true, true)]
+    // local procedure extSalesPrepareInvBuffer(var SalesLine: Record "Sales Line"; var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    // begin
+    //     InvoicePostBuffer."lbt Process No." := SalesLine."lbt Process No.";
+    // end;
+
+    [EventSubscriber(ObjectType::Table, Database::"Invoice Posting Buffer", 'OnAfterPrepareSales', '', true, true)]
+    local procedure extSalesPrepareInvBuffer2(var SalesLine: Record "Sales Line"; var InvoicePostingBuffer: Record "Invoice Posting Buffer" temporary)
     begin
-        InvoicePostBuffer."lbt Process No." := purchaseLine."lbt Process No.";
+        InvoicePostingBuffer."lbt Process No." := SalesLine."lbt Process No.";
+    end;
+
+
+    // [EventSubscriber(ObjectType::table, database::"Invoice Post. Buffer", 'OnAfterInvPostBufferPreparePurchase', '', true, true)]
+    // local procedure extPurchPrepareInvBuffer(var PurchaseLine: Record "Purchase Line"; var InvoicePostBuffer: Record "Invoice Post. Buffer")
+    // begin
+    //     InvoicePostBuffer."lbt Process No." := purchaseLine."lbt Process No.";
+    // end;
+    [EventSubscriber(ObjectType::Table, Database::"Invoice Posting Buffer", 'OnAfterPreparePurchase', '', true, true)]
+    local procedure extPurchPrepareInvBuffer2(var PurchaseLine: Record "Purchase Line"; var InvoicePostingBuffer: Record "Invoice Posting Buffer" temporary)
+    begin
+        InvoicePostingBuffer."lbt Process No." := PurchaseLine."lbt Process No.";
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Detailed CV Ledg. Entry Buffer", 'OnAfterCopyFromGenJnlLine', '', true, true)]
