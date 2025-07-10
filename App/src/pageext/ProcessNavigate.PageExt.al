@@ -66,6 +66,11 @@ pageextension 5266549 "lbt ProcessNavigate" extends Navigate//344
     end;
 
     protected var
+        [Obsolete('Use "lbtProcessNo" instead.', '2025-07-10')]
+        ProcessNo: code[50];
+        [Obsolete('Use "lbtProcessNoFilter" instead.', '2025-07-10')]
+        ProcessNoFilter: Text;
+
         "lbtProcessNo": Code[50];
         lbtProcessNoFilter: Text;
 
@@ -107,6 +112,13 @@ pageextension 5266549 "lbt ProcessNavigate" extends Navigate//344
     begin
         Rec.SetRange("lbt Process No.", "lbtProcessNo");
         lbtProcessNoFilter := Rec.GetFilter("lbt Process No.")
+    end;
+
+    [Obsolete('Use lbtSetProcessNo instead.', '2025-07-10')]
+    procedure SetProcessNo(p_ProcessNo: Code[50])
+    begin
+        ProcessNo := p_ProcessNo;
+        lbtSetProcessNo(p_ProcessNo);
     end;
 
     procedure lbtSetProcessNo(p_ProcessNo: Code[50])
