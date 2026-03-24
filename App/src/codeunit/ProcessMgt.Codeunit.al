@@ -180,7 +180,7 @@ codeunit 5266500 "lbt Process Mgt."
     // begin
     //     InvoicePostBuffer."lbt Process No." := purchaseLine."lbt Process No.";
     // end;
-    [EventSubscriber(ObjectType::Table, Database::"Invoice Posting Buffer", 'OnAfterPreparePurchase', '', true, true)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch. Post Invoice Events", 'OnAfterPrepareInvoicePostingBuffer', '', true, true)]
     local procedure extPurchPrepareInvBuffer2(var PurchaseLine: Record "Purchase Line"; var InvoicePostingBuffer: Record "Invoice Posting Buffer" temporary)
     begin
         InvoicePostingBuffer."lbt Process No." := PurchaseLine."lbt Process No.";
@@ -247,8 +247,7 @@ codeunit 5266500 "lbt Process Mgt."
     // begin
     //     InvoicePostBuffer."lbt Process No." := SalesLine."lbt Process No.";
     // end;
-
-    [EventSubscriber(ObjectType::Table, Database::"Invoice Posting Buffer", 'OnAfterPrepareSales', '', true, true)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales Post Invoice Events", 'OnAfterPrepareInvoicePostingBuffer', '', true, true)]
     local procedure extSalesPrepareInvBuffer2(var SalesLine: Record "Sales Line"; var InvoicePostingBuffer: Record "Invoice Posting Buffer" temporary)
     begin
         InvoicePostingBuffer."lbt Process No." := SalesLine."lbt Process No.";
@@ -273,8 +272,8 @@ codeunit 5266500 "lbt Process Mgt."
     end;
 
     ///NAVIGATE: Show event
-    [EventSubscriber(ObjectType::Page, Page::Navigate, 'OnBeforeNavigateShowRecords', '', true, true)]
-    local procedure OnBeforeNavigateShowRecords(TableID: Integer; var TempDocumentEntry: Record "Document Entry"; var IsHandled: Boolean)
+    [EventSubscriber(ObjectType::Page, Page::Navigate, OnBeforeShowRecords, '', false, false)]
+    local procedure Navigate_OnBeforeShowRecords(var Sender: Page Navigate; var TempDocumentEntry: Record "Document Entry" temporary; DocNoFilter: Text; PostingDateFilter: Text; ItemTrackingSearch: Boolean; ContactNo: Code[250]; ExtDocNo: Code[250]; var IsHandled: Boolean)
     var
         PageMgt: Codeunit "Page Management";
         RecRef: RecordRef;
