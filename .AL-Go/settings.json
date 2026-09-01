@@ -17,5 +17,6 @@
   ],
   "appSourceCopMandatoryAffixes": [
     "lbt"
-  ]
+  ],
+  "repoVersion": "1.1"
 }
